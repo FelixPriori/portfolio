@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $body-color;
+  font-family: $roboto;
+  color: $font-color;
+  background-image: url('../images/diagonal-background.svg');
+  background-attachment: scroll;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+// BUTTON OVERIDES
+
+.btn {
+  &.btn-blue {
+    border: 1px solid $font-color;
+    color: $font-color;
+
+    &:hover {
+      background-color: $font-color;
+      color: $body-color;
+    }
+  }
+
+  &.btn-yellow {
+    background-color: $highlight;
+    color: $font-color;
+
+    &:hover {
+      background-color: darken($highlight, 10%);
+      color: $font-color;
+    }
+  }
+}
