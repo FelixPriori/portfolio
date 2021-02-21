@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Container, Row} from 'reactstrap'
+import {Container, Row, Col} from 'reactstrap'
 import StyledHeader from './StyledHeader'
-import {TextColumn, Subtitle} from '../styles/styled-components'
+import ContactForm from './ContactForm'
+import SocialList from './SocialList'
+import {TextColumn, Subtitle, SocialMediaColumn} from '../styles/styled-components'
 
 function ContactSection() {
   return (
@@ -12,7 +14,14 @@ function ContactSection() {
           <Subtitle>Contact</Subtitle>
         </StyledHeader>
         <Row>
-          <TextColumn></TextColumn>
+          <SocialMediaColumn>
+            <h3>Social Media</h3>
+            <SocialList />
+          </SocialMediaColumn>
+          <Col>
+            <h3>Reach out</h3>
+            <ContactForm />
+          </Col>
         </Row>
       </Container>
     </ContactSectionWrapper>
