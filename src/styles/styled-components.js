@@ -58,3 +58,5 @@ export const ImageColumn = styled(Col)`
   display: flex;
   align-items: center;
 `
+
+export const SocialMediaColumn = styled(Col)``
