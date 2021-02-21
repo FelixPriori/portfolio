@@ -46,4 +46,13 @@ h3 {
       color: $font-color;
     }
   }
+
+  &.btn-purple {
+    background-color: #b48ead;
+    color: $body-color;
+
+    &:hover {
+      background-color: darken(#b48ead, 10%);
+    }
+  }
 }
