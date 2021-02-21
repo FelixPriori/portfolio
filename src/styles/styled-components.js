@@ -1,26 +1,21 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import {Col} from 'reactstrap'
+import {Link} from 'gatsby'
 
 export const Main = styled.main`
   padding: 1em;
 `
 
-export const IntroSection = styled.section`
-  min-height: 100vh;
-`
-export const AboutSection = styled.section`
-  min-height: 100vh;
-`
-export const ProjectsSection = styled.section`
-  min-height: 100vh;
-`
-export const ContactSection = styled.section`
-  min-height: 100vh;
+export const StyledLink = styled(Link)`
+  color: #5e81ac;
+  font-size: 20px;
+
+  &:hover {
+    color: #a3be8c;
+  }
 `
 
-export const Title = styled.h1`
-  color: #5e81ac;
-`
+export const Title = styled.h1``
 
 export const Subtitle = styled.h2`
   color: #5e81ac;
@@ -33,6 +28,7 @@ export const AvatarColumn = styled(Col)`
 export const TextColumn = styled(Col)`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 `
 
@@ -47,4 +43,18 @@ export const ButtonContainer = styled.div`
   & > a {
     margin-right: 1em;
   }
+`
+
+export const Paragraph = styled.p`
+  padding: 1em;
+`
+
+export const ProjectImage = styled.img`
+  max-height: 300px;
+  width: 100%;
+`
+
+export const ImageColumn = styled(Col)`
+  display: flex;
+  align-items: center;
 `
