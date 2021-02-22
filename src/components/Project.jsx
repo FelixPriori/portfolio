@@ -19,7 +19,7 @@ function Project({name, description, screenshot, slug, stack, alt}) {
             <ul>{stack && stack.map(({tech, id}, i) => i >= 3 && <li key={id}>{tech}</li>)}</ul>
           </Col>
         </Row>
-        <Link className="btn btn-purple" to={slug}>
+        <Link className="btn btn-dark-outline" to={slug}>
           View Project
         </Link>
       </Col>
