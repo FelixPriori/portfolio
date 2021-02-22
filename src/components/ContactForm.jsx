@@ -3,7 +3,9 @@ import {Form, Input, Label, Button} from 'reactstrap'
 
 function ContactForm() {
   return (
-    <Form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <Form name="contact-form" method="post" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="contact-form" value="contact" />
+
       <Label htmlFor="name">Name</Label>
       <Input name="name" type="text" />
 
