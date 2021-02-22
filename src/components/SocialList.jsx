@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'gatsby'
 import GitHub from '../images/logo-github.svg'
 import Instagram from '../images/logo-instagram.svg'
 import LinkedIn from '../images/logo-linkedin.svg'
