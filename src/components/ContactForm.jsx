@@ -3,7 +3,7 @@ import {Form, Input, Label, Button} from 'reactstrap'
 
 function ContactForm() {
   return (
-    <Form name="contact" method="POST" data-netlify="true">
+    <Form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <Label htmlFor="name">Name</Label>
       <Input name="name" type="text" />
 
