@@ -54,4 +54,6 @@ function ProjectsSection() {
 
 export default ProjectsSection
 
-const ProjectsSectionWrapper = styled.section``
+const ProjectsSectionWrapper = styled.section`
+  padding: 4em 0;
+`
