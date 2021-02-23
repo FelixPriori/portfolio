@@ -1,10 +1,9 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
 import {Container, Row, Col} from 'reactstrap'
-import StyledHeader from './StyledHeader'
 import ContactForm from './ContactForm'
 import SocialList from './SocialList'
-import {TextColumn, Subtitle, SocialMediaColumn} from '../styles/styled-components'
+import {Subtitle, SocialMediaColumn} from '../styles/styled-components'
 import ContactBackground from '../images/contact-background.svg'
 
 function ContactSection() {
