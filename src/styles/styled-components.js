@@ -1,10 +1,8 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Col} from 'reactstrap'
 import {Link} from 'gatsby'
 
-export const Main = styled.main`
-  padding: 1em;
-`
+export const Main = styled.main``
 
 export const StyledLink = styled(Link)`
   color: #5e81ac;
@@ -18,7 +16,7 @@ export const StyledLink = styled(Link)`
 export const Title = styled.h1``
 
 export const Subtitle = styled.h2`
-  color: #5e81ac;
+  color: ${(props) => (props.color ? props.color : '#5e81ac')};
 `
 
 export const AvatarColumn = styled(Col)`
