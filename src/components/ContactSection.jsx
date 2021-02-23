@@ -1,24 +1,26 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Container, Row, Col} from 'reactstrap'
 import StyledHeader from './StyledHeader'
 import ContactForm from './ContactForm'
 import SocialList from './SocialList'
 import {TextColumn, Subtitle, SocialMediaColumn} from '../styles/styled-components'
+import ContactBackground from '../images/contact-background.svg'
 
 function ContactSection() {
   return (
-    <ContactSectionWrapper id="contact">
+    <ContactSectionWrapper id="contact" bg={ContactBackground}>
       <Container>
-        <StyledHeader>
-          <Subtitle>Contact</Subtitle>
-        </StyledHeader>
+        <TitleContainer>
+          <Subtitle color="#eceff4">Contact</Subtitle>
+        </TitleContainer>
+
         <Row>
-          <SocialMediaColumn>
+          <SocialMediaColumn md="6">
             <h3>Social Media</h3>
             <SocialList />
           </SocialMediaColumn>
-          <Col>
+          <Col md="6">
             <h3>Reach out</h3>
             <ContactForm />
           </Col>
@@ -30,4 +32,23 @@ function ContactSection() {
 
 export default ContactSection
 
-const ContactSectionWrapper = styled.section``
+const ContactSectionWrapper = styled.section`
+  padding: 4em 0;
+  color: #eceff4;
+  ${(props) =>
+    props.bg &&
+    css`
+      background-image: url(${props.bg});
+      background-attachment: scroll;
+      background-position: center;
+      background-repeat: no-repeat;
+    `}
+
+  a {
+    color: #eceff4;
+  }
+`
+
+const TitleContainer = styled.div`
+  padding: 2em 0;
+`
