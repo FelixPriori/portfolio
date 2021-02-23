@@ -49,4 +49,6 @@ function AboutSection() {
 
 export default AboutSection
 
-const AboutSectionWrapper = styled.section``
+const AboutSectionWrapper = styled.section`
+  padding: 4em 0;
+`
