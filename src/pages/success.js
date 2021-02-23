@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import StyledHeader from '../components/StyledHeader'
-import {Title, Main, StyledLink, Subtitle} from '../styles/styled-components'
+import {Title, Main, StyledLink} from '../styles/styled-components'
 
 const SuccessPage = () => {
   return (
