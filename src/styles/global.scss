@@ -56,4 +56,14 @@ h3 {
       transition: 200ms;
     }
   }
+
+  &.btn-submit {
+    background-color: $highlight;
+    color: #3b4252;
+
+    &:hover {
+      background-color: darken($highlight, 10%);
+      transition: 200ms;
+    }
+  }
 }
