@@ -1,24 +1,32 @@
 import React from 'react'
-import {Form, Input, Label, Button} from 'reactstrap'
+import {Form, Input, Label, Button, FormGroup} from 'reactstrap'
 
 function ContactForm() {
   return (
     <Form name="contact-form" method="post" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="contact-form" value="contact" />
 
-      <Label htmlFor="name">Name</Label>
-      <Input name="name" type="text" />
+      <FormGroup>
+        <Label htmlFor="name">Name</Label>
+        <Input name="name" type="text" placeholder="Your name" />
+      </FormGroup>
 
-      <Label htmlFor="email">Email</Label>
-      <Input name="email" type="email" />
+      <FormGroup>
+        <Label htmlFor="email">Email</Label>
+        <Input name="email" type="email" placeholder="Your email" />
+      </FormGroup>
 
-      <Label htmlFor="subject">Subject</Label>
-      <Input name="subject" type="text" />
+      <FormGroup>
+        <Label htmlFor="subject">Subject</Label>
+        <Input name="subject" type="text" placeholder="Your subject" />
+      </FormGroup>
 
-      <Label htmlFor="message">message</Label>
-      <Input name="message" type="textarea" />
+      <FormGroup>
+        <Label htmlFor="message">Message</Label>
+        <Input name="message" type="textarea" placeholder="Type your message here..." />
+      </FormGroup>
 
-      <Button color="yellow" type="submit">
+      <Button color="submit" type="submit">
         Send
       </Button>
     </Form>
