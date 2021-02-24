@@ -3,6 +3,7 @@ import {Link} from 'gatsby'
 import {Container, Row} from 'reactstrap'
 import StyledHeader from './StyledHeader'
 import Avatar from './Avatar'
+import SocialList from './SocialList'
 import {TextColumn, Title, BigText, ButtonContainer, AvatarColumn} from '../styles/styled-components'
 
 function IntroSection() {
@@ -21,13 +22,19 @@ function IntroSection() {
             <Link className="btn btn-blue" to="#contact">
               Contact
             </Link>
-            <Link className="btn btn-yellow" to="#projects">
-              Projects
-            </Link>
+            <a
+              className="btn btn-yellow"
+              href="https://resume.creddle.io/resume/1upmg1yxkj4"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
           </ButtonContainer>
         </TextColumn>
         <AvatarColumn>
           <Avatar />
+          <SocialList />
         </AvatarColumn>
       </Row>
     </Container>
