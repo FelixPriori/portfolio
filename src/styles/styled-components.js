@@ -13,6 +13,31 @@ export const StyledLink = styled(Link)`
   }
 `
 
+export const StyledProjectLink = styled(Link)`
+  margin: 1em;
+`
+
+export const StyledIconLink = styled.a`
+  color: #5e81ac;
+  font-size: 20px;
+  transition: 200ms;
+
+  svg {
+    height: 28px;
+    width: 28px;
+    fill: #4c566a;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #e5e9f0;
+
+    svg {
+      fill: #88c0d0;
+    }
+  }
+`
+
 export const Title = styled.h1`
   text-shadow: 5px 5px #ebcb8b;
 `
@@ -60,8 +85,6 @@ export const ImageColumn = styled(Col)`
   align-items: center;
 `
 
-export const SocialMediaColumn = styled(Col)``
-
 export const HeaderContainer = styled.div`
   height: 100%;
   padding: 3em 1em;
@@ -70,37 +93,16 @@ export const HeaderContainer = styled.div`
 `
 
 export const List = styled.ul`
+  display: flex;
+  justify-content: center;
+  width: 100%;
   list-style: none;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
 `
 
 export const ListItem = styled.li`
-  margin: 1em 0;
-`
-
-export const StyledIconLink = styled.a`
-  color: #5e81ac;
-  font-size: 20px;
-  transition: 200ms;
-
-  svg {
-    height: 32px;
-    width: 32px;
-    fill: #eceff4;
-    margin-right: 1em;
-  }
-
-  &:hover {
-    text-decoration: none;
-    font-size: 24px;
-    color: #e5e9f0;
-
-    svg {
-      height: 36px;
-      width: 36px;
-      fill: #e5e9f0;
-    }
-  }
+  margin: 0.5em;
 `
 
 export const AboutSectionWrapper = styled.section`
@@ -115,37 +117,6 @@ export const StyledAvatar = styled.img`
 
 export const ErrorMessage = styled.div`
   color: #bf616a;
-`
-export const StyledInput = styled.input`
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-`
-
-export const StyledTextarea = styled.textarea`
-  display: block;
-  width: 100%;
-  min-height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 `
 
 export const ContactSectionWrapper = styled.section`
@@ -180,10 +151,8 @@ export const StackRow = styled(Row)`
   }
 `
 
-export const StyledProjectLink = styled(Link)`
-  margin: 1em;
-`
-
 export const ProjectsSectionWrapper = styled.section`
   padding: 3em 0;
 `
+
+export const FormWrapper = styled(Col)``
