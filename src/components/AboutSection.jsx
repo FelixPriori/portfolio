@@ -1,8 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import {Container, Row, Col} from 'reactstrap'
 import StyledHeader from './StyledHeader'
-import {Subtitle, Paragraph} from '../styles/styled-components'
+import {Subtitle, Paragraph, AboutSectionWrapper} from '../styles/styled-components'
 
 function AboutSection() {
   return (
@@ -12,7 +11,7 @@ function AboutSection() {
           <Subtitle>About Me</Subtitle>
         </StyledHeader>
         <Row>
-          <Col>
+          <Col md="6">
             <h3>Summary</h3>
             <Paragraph>
               I am a life-long learner and arts-oriented individual who fell in love with programming as a way to create
@@ -22,7 +21,7 @@ function AboutSection() {
               world.
             </Paragraph>
           </Col>
-          <Col>
+          <Col md="6">
             <h3>Stack</h3>
             <Row>
               <Col>
@@ -48,7 +47,3 @@ function AboutSection() {
 }
 
 export default AboutSection
-
-const AboutSectionWrapper = styled.section`
-  padding: 4em 0;
-`
