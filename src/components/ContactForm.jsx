@@ -4,8 +4,8 @@ import {navigate} from 'gatsby'
 import {yupResolver} from '@hookform/resolvers/yup'
 import axios from 'axios'
 import * as yup from 'yup'
-import {Form, Label, Button, FormGroup} from 'reactstrap'
-import {ErrorMessage, StyledInput, StyledTextarea} from '../styles/styled-components'
+import {Form, Label, Input, Button, FormGroup} from 'reactstrap'
+import {ErrorMessage} from '../styles/styled-components'
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -21,7 +21,7 @@ function ContactForm() {
     subject: '',
     message: '',
   })
-  const {register, handleSubmit, errors} = useForm({resolver: yupResolver(schema)})
+  const {register, handleSubmit, errors} = useForm({resolver: yupResolver(schema), reValidateMode: 'onTouched'})
 
   const onNameChange = ({target}) => setFormValues((prevValues) => ({...prevValues, name: target.value}))
   const onEmailChange = ({target}) => setFormValues((prevValues) => ({...prevValues, email: target.value}))
@@ -56,52 +56,53 @@ function ContactForm() {
 
       <FormGroup>
         <Label htmlFor="name">Name</Label>
-        <StyledInput
+        <Input
           name="name"
           value={formValues.name}
           type="text"
           placeholder="Your name"
           onChange={onNameChange}
-          ref={register}
+          innerRef={register}
         />
         {errors.name && <ErrorMessage>Name is required</ErrorMessage>}
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="email">Email</Label>
-        <StyledInput
+        <Input
           name="email"
           value={formValues.email}
           type="email"
           placeholder="Your email"
           onChange={onEmailChange}
-          ref={register}
+          innerRef={register}
         />
         {errors.email && <ErrorMessage>Email is required</ErrorMessage>}
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="subject">Subject</Label>
-        <StyledInput
+        <Input
           name="subject"
           value={formValues.subject}
           type="text"
           placeholder="Your subject"
           onChange={onSubjectChange}
-          ref={register}
+          innerRef={register}
         />
         {errors.subject && <ErrorMessage>Subject is required</ErrorMessage>}
       </FormGroup>
 
       <FormGroup>
         <Label htmlFor="message">Message</Label>
-        <StyledTextarea
+        <Input
           name="message"
           value={formValues.message}
           type="textarea"
           placeholder="Type your message here..."
           onChange={onMessageChange}
-          ref={register}
+          onBlur
+          innerRef={register}
         />
         {errors.message && <ErrorMessage>Message is required</ErrorMessage>}
       </FormGroup>
