@@ -1,9 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 import {Container} from 'reactstrap'
 import StyledHeader from './StyledHeader'
 import Project from './Project'
-import {Subtitle} from '../styles/styled-components'
+import {Subtitle, ProjectsSectionWrapper} from '../styles/styled-components'
 import Shoppies from '../images/shoppies.png'
 import SideQuests from '../images/side-quests.png'
 
@@ -53,7 +52,3 @@ function ProjectsSection() {
 }
 
 export default ProjectsSection
-
-const ProjectsSectionWrapper = styled.section`
-  padding: 4em 0;
-`
