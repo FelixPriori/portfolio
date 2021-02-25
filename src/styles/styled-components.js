@@ -156,3 +156,9 @@ export const ProjectsSectionWrapper = styled.section`
 `
 
 export const FormWrapper = styled(Col)``
+
+export const Showcase = styled.div``
+
+export const ImageWithShadow = styled.img`
+  box-shadow: 5px 5px 10px #81a1c1, -5px -5px 10px #81a1c1, -5px 5px 10px #81a1c1, 5px -5px 10px #81a1c1;
+`
