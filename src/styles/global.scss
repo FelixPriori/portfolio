@@ -66,4 +66,14 @@ h3 {
       transition: 200ms;
     }
   }
+
+  &.btn-red {
+    border: 1px solid #bf616a;
+    color: #bf616a;
+
+    &:hover {
+      background-color: #bf616a;
+      color: $body-color;
+    }
+  }
 }
