@@ -101,7 +101,6 @@ function ContactForm() {
           type="textarea"
           placeholder="Type your message here..."
           onChange={onMessageChange}
-          onBlur
           innerRef={register}
         />
         {errors.message && <ErrorMessage>Message is required</ErrorMessage>}
