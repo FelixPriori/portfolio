@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Row, Col} from 'reactstrap'
-import StyledHeader from './StyledHeader'
-import {Subtitle, Paragraph, AboutSectionWrapper} from '../styles/styled-components'
+import StyledHeader from '../StyledHeader'
+import {Subtitle, Paragraph, AboutSectionWrapper} from '../../styles/styled-components'
 
 function AboutSection() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import {ReactComponent as GitHub} from '../images/logo-github.svg'
-import {ReactComponent as Instagram} from '../images/logo-instagram.svg'
-import {ReactComponent as LinkedIn} from '../images/logo-linkedin.svg'
-import {ReactComponent as Twitter} from '../images/logo-twitter.svg'
-import {List, ListItem, StyledIconLink} from '../styles/styled-components'
+import {ReactComponent as GitHub} from '../../images/logo-github.svg'
+import {ReactComponent as Instagram} from '../../images/logo-instagram.svg'
+import {ReactComponent as LinkedIn} from '../../images/logo-linkedin.svg'
+import {ReactComponent as Twitter} from '../../images/logo-twitter.svg'
+import {List, ListItem, StyledIconLink} from '../../styles/styled-components'
 
 function SocialListItem({link, children}) {
   return (

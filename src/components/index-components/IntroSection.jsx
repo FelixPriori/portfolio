@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {Container, Row} from 'reactstrap'
-import StyledHeader from './StyledHeader'
+import StyledHeader from '../StyledHeader'
 import Avatar from './Avatar'
 import SocialList from './SocialList'
-import {TextColumn, Title, BigText, ButtonContainer, AvatarColumn} from '../styles/styled-components'
+import {TextColumn, Title, BigText, ButtonContainer, AvatarColumn} from '../../styles/styled-components'
 
 function IntroSection() {
   return (

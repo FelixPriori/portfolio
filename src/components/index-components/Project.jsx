@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Col} from 'reactstrap'
-import {ProjectImage, ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../styles/styled-components'
+import {ProjectImage, ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../../styles/styled-components'
 
 function Project({name, description, screenshot, slug, stack, alt}) {
   return (

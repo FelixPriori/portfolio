@@ -1,10 +1,10 @@
 import React from 'react'
 import {Container} from 'reactstrap'
-import StyledHeader from './StyledHeader'
 import Project from './Project'
-import {Subtitle, ProjectsSectionWrapper} from '../styles/styled-components'
-import Shoppies from '../images/shoppies.png'
-import SideQuests from '../images/side-quests.png'
+import StyledHeader from '../StyledHeader'
+import {Subtitle, ProjectsSectionWrapper} from '../../styles/styled-components'
+import Shoppies from '../../images/shoppies.png'
+import SideQuests from '../../images/side-quests.png'
 
 const shoppiesStack = [
   {tech: 'React', id: 1},
