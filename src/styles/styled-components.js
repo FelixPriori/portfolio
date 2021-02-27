@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components'
-import {Col, Row} from 'reactstrap'
+import {Col, Row, Container} from 'reactstrap'
 import {Link} from 'gatsby'
+
+const shadow = `1px 1px 10px #81a1c1, -1px -1px 10px #81a1c1, -1px 1px 10px #81a1c1, 1px -1px 10px #81a1c1`
 
 export const Main = styled.main``
 
@@ -64,7 +66,7 @@ export const BigText = styled.h3`
 `
 
 export const ButtonContainer = styled.div`
-  padding-top: 1em;
+  padding: 1em 0;
 
   & > a {
     margin-right: 1em;
@@ -72,6 +74,7 @@ export const ButtonContainer = styled.div`
 `
 
 export const Paragraph = styled.p`
+  margin: 0;
   padding: 1em;
 `
 
@@ -160,5 +163,123 @@ export const FormWrapper = styled(Col)``
 export const Showcase = styled.div``
 
 export const ImageWithShadow = styled.img`
-  box-shadow: 5px 5px 10px #81a1c1, -5px -5px 10px #81a1c1, -5px 5px 10px #81a1c1, 5px -5px 10px #81a1c1;
+  box-shadow: ${shadow};
+  height: ${({height}) => (height ? `${height}px` : '')};
+  width: ${({width}) => (width ? `${width}px` : '')};
+`
+
+export const ReactSpinningLogo = styled.img`
+  height: 60px;
+  width: 60px;
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  animation: App-logo-spin infinite 20s linear;
+`
+
+export const Logo = styled.img`
+  height: ${({height}) => (height ? `${height}px` : '')};
+  width: ${({width}) => (width ? `${width}px` : '')};
+`
+
+export const LogoLinkedContainer = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  min-width: 120px;
+  max-width: 120px;
+  min-height: 60px;
+  max-height: 120px;
+  background-color: #eceff4;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 10px #d8dee9;
+`
+
+export const LogoCol = styled(Col)`
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin-left: 2em;
+  }
+`
+
+export const SectionWrapper = styled(Container)`
+  padding: 3em 0;
+`
+
+export const LogoBoxCol = styled(Col)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100%;
+`
+
+export const MessagePreviewList = styled.ul`
+  list-style: none;
+  margin: 0;
+
+  li {
+    padding: 1em;
+  }
+`
+
+export const PostersContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`
+
+export const SubSection = styled.div`
+  padding: 2em 0;
+`
+
+export const RedLight = styled.div`
+  min-width: 5px;
+  min-height: 5px;
+  max-width: 5px;
+  max-height: 5px;
+  background-color: #bf616a;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #bf616a, -1px -1px 5px #bf616a, -1px 1px 5px #bf616a, 1px -1px 5px #bf616a;
+`
+
+export const FooterWrapper = styled.footer`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: baseline;
+  padding-top: 4em;
+`
+
+export const GithubLink = styled.a`
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  svg {
+    margin-left: 1em;
+    height: 32px;
+    width: 32px;
+    fill: #eceff4;
+  }
+
+  &:hover {
+    color: #81a1c1;
+    svg {
+      fill: #81a1c1;
+    }
+  }
 `
