@@ -71,9 +71,26 @@ h3 {
     border: 1px solid #bf616a;
     color: #bf616a;
 
+    div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      p {
+        margin: 0 0 0 1em;
+      }
+    }
+
     &:hover {
       background-color: #bf616a;
       color: $body-color;
+
+      div {
+        div {
+          box-shadow: 1px 1px 5px $body-color, -1px -1px 5px $body-color, -1px 1px 5px $body-color,
+            1px -1px 5px $body-color;
+        }
+      }
     }
   }
 }
