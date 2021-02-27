@@ -6,7 +6,7 @@ import Nominations from '../../images/shoppies-nominations.png'
 
 function SummarySection() {
   return (
-    <Container id="intro">
+    <Container id="summary">
       <StyledHeader>
         <Subtitle>Summary</Subtitle>
       </StyledHeader>
@@ -20,7 +20,7 @@ function SummarySection() {
           <Paragraph>
             The idea is to create an app which lets the user search a database for their favourite movies, and nominate
             them for a Shoppy award. Users can only add up to 5 nominations, and movies can be removed from the
-            nominations list if the user chages their mind.
+            nominations list if the user changes their mind.
           </Paragraph>
           <Paragraph>
             If the movie is already nominated, its nomination button should be disabled, the search results should
