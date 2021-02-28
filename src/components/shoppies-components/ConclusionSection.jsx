@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {Row, Col} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
-import {SectionWrapper, Subtitle, Paragraph, SubSection} from '../../styles/styled-components'
+import {SectionWrapper, Subtitle, Paragraph, SubSection, ButtonContainer} from '../../styles/styled-components'
 
 function ConclusionSection() {
   return (
@@ -34,9 +34,11 @@ function ConclusionSection() {
           </Col>
         </Row>
       </SubSection>
-      <Link to="/" className="btn btn-yellow">
-        Return
-      </Link>
+      <ButtonContainer>
+        <Link to="/" className="btn btn-yellow">
+          Return
+        </Link>
+      </ButtonContainer>
     </SectionWrapper>
   )
 }
