@@ -3,6 +3,17 @@ module.exports = {
     title: 'portfolio',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-36BV3FS57L', // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-styled-components',
     {
