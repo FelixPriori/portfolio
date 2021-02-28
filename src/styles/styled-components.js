@@ -67,6 +67,7 @@ export const BigText = styled.h3`
 
 export const ButtonContainer = styled.div`
   padding: 1em 0;
+  margin-left: 0.5em;
 
   & > a {
     margin-right: 1em;
@@ -227,8 +228,10 @@ export const LogoBoxCol = styled(Col)`
 export const MessagePreviewList = styled.ul`
   list-style: none;
   margin: 0;
+  padding: 0;
 
   li {
+    margin: 0;
     padding: 1em;
   }
 `
