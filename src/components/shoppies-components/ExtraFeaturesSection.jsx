@@ -50,9 +50,9 @@ function ExtraFeaturesSection() {
         <Subtitle>Extra Features</Subtitle>
       </StyledHeader>
       <SubSection>
-        <h3>Prompts & Messages</h3>
         <Row>
           <Col lg={6}>
+            <h3>Prompts & Messages</h3>
             <Paragraph>
               I wanted the user to be guided seamlessly through the nomination process, which is why I decided to have
               cards, made with Bootstrap, that prompt users toward the next step.
@@ -84,9 +84,9 @@ function ExtraFeaturesSection() {
         </Row>
       </SubSection>
       <SubSection>
-        <h3>Movie Card</h3>
         <Row>
           <Col lg={6}>
+            <h3>Movie Card</h3>
             <Paragraph>
               In addition to the required title and date, I decided to also show the user the movie poster, and in case
               the poster was not available, show a custom fallback image instead. I found that posters were a fun way to
@@ -106,9 +106,9 @@ function ExtraFeaturesSection() {
         </Row>
       </SubSection>
       <SubSection>
-        <h3>Misc</h3>
         <Row>
           <Col lg={6}>
+            <h3>Misc</h3>
             <ul>
               <li>
                 The app saves the user's nominations list to local storage, and retrieves it at the next visit using a
