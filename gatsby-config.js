@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'portfolio',
+    title: 'My Portfolio',
+    description: "FelixPriori's web developer portfolio",
+    url: 'http://www.felixpriori.dev',
+    image: '/src/images/avatar.jpg',
+    twitterUsername: '@FelixPriori',
+    author: 'Felix Rioux Sabourin',
+    keywords: ['Front-end developer', 'ReactJS', 'Web developer'],
   },
   plugins: [
     {
@@ -16,6 +22,7 @@ module.exports = {
     },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
