@@ -6,10 +6,13 @@ import SummarySection from '../components/shoppies-components/SummarySection'
 import StackSection from '../components/shoppies-components/StackSection'
 import ExtraFeaturesSection from '../components/shoppies-components/ExtraFeaturesSection'
 import ConclusionSection from '../components/shoppies-components/ConclusionSection'
+import SEO from '../components/SEO'
 
 function ShoppiesPage() {
   return (
     <Main>
+      <SEO />
+      <title>Shoppies</title>
       <IntroSection />
 
       <SummarySection />
