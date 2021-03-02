@@ -12,7 +12,7 @@ function ShoppiesPage() {
   return (
     <Main>
       <SEO />
-      <title>Shoppies</title>
+
       <IntroSection />
 
       <SummarySection />

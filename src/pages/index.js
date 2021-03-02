@@ -10,7 +10,6 @@ function IndexPage() {
   return (
     <Main>
       <SEO />
-      <title>Home Page</title>
 
       <IntroSection />
 
