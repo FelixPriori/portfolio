@@ -12,7 +12,7 @@ import Navbar from '../components/Navbar'
 function ShoppiesPage() {
   return (
     <Main>
-      <SEO title="Felix's Web Dev Portfolio | Shoppies Project" />
+      <SEO title="Shoppies | FelixPriori Porfolio" />
 
       <Navbar />
 
