@@ -10,7 +10,7 @@ import SEO from '../components/SEO'
 function IndexPage() {
   return (
     <Main>
-      <SEO />
+      <SEO title="Felix's Web Dev Portfolio | Home Page" />
 
       <Navbar />
 
