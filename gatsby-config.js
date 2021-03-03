@@ -20,6 +20,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{userAgent: '*', allow: '/'}],
+      },
+    },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
