@@ -17,9 +17,9 @@ function ConclusionSection() {
             <Paragraph>
               I really wanted the code to look especially neat for the reviewers for this project (not that it isn't
               usually), so I went back a lot on my code to write and rewrite until I was satisfied with how it looked. I
-              tried put a lot of thought and intention into naming each components (react or styled), variables, files,
-              and functions so as to improve readability to a maximum. This ended up making my life a lot easier when I
-              went to add extra features and refactor the code afterwards. This is something I will keep in my
+              tried to put a lot of thought and intention into naming each component (react or styled), variables,
+              files, and functions so as to improve readability to a maximum. This ended up making my life a lot easier
+              when I went to add extra features and refactor the code afterwards. This is something I will keep in my
               day-to-day work for sure.
             </Paragraph>
           </Col>
