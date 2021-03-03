@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 const SuccessPage = () => {
   return (
     <Main>
-      <SEO title="Message Sent | FelixPriori Porfolio" />
+      <SEO title="Message Sent | FelixPriori Porftolio" />
 
       <StyledHeader>
         <Title>Message sent successfully</Title>

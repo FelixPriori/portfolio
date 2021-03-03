@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 function UnderConstruction() {
   return (
     <Main>
-      <SEO title="Under Construction | FelixPriori Porfolio" />
+      <SEO title="Under Construction | FelixPriori Porftolio" />
 
       <StyledHeader>
         <Title>Page Currently Under Construction</Title>
