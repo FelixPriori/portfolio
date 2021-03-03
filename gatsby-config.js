@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'My Portfolio',
     description: "FelixPriori's web developer portfolio",
-    url: 'http://www.felixpriori.dev',
+    siteUrl: 'http://www.felixpriori.dev',
     image: '/src/images/avatar.jpg',
     twitterUsername: '@FelixPriori',
     author: 'Felix Rioux Sabourin',
