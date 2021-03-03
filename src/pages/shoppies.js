@@ -7,11 +7,14 @@ import StackSection from '../components/shoppies-components/StackSection'
 import ExtraFeaturesSection from '../components/shoppies-components/ExtraFeaturesSection'
 import ConclusionSection from '../components/shoppies-components/ConclusionSection'
 import SEO from '../components/SEO'
+import Navbar from '../components/Navbar'
 
 function ShoppiesPage() {
   return (
     <Main>
       <SEO />
+
+      <Navbar />
 
       <IntroSection />
 
