@@ -18,14 +18,12 @@ function ContactForm() {
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   })
   const {register, handleSubmit, errors} = useForm({resolver: yupResolver(schema), reValidateMode: 'onTouched'})
 
   const onNameChange = ({target}) => setFormValues((prevValues) => ({...prevValues, name: target.value}))
   const onEmailChange = ({target}) => setFormValues((prevValues) => ({...prevValues, email: target.value}))
-  const onSubjectChange = ({target}) => setFormValues((prevValues) => ({...prevValues, subject: target.value}))
   const onMessageChange = ({target}) => setFormValues((prevValues) => ({...prevValues, message: target.value}))
 
   const encode = (data) => {
@@ -78,19 +76,6 @@ function ContactForm() {
           innerRef={register}
         />
         {errors.email && <ErrorMessage>Email is required</ErrorMessage>}
-      </FormGroup>
-
-      <FormGroup>
-        <Label htmlFor="subject">Subject</Label>
-        <Input
-          name="subject"
-          value={formValues.subject}
-          type="text"
-          placeholder="Your subject"
-          onChange={onSubjectChange}
-          innerRef={register}
-        />
-        {errors.subject && <ErrorMessage>Subject is required</ErrorMessage>}
       </FormGroup>
 
       <FormGroup>
