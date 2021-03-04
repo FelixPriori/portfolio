@@ -1,11 +1,11 @@
 import React from 'react'
 import {Container, Row, Col} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
-import {Subtitle, Paragraph, AboutSectionWrapper} from '../../styles/styled-components'
+import {Subtitle, Paragraph, SectionWrapper} from '../../styles/styled-components'
 
 function AboutSection() {
   return (
-    <AboutSectionWrapper id="about">
+    <SectionWrapper id="about">
       <Container>
         <StyledHeader>
           <Subtitle>About Me</Subtitle>
@@ -42,7 +42,7 @@ function AboutSection() {
           </Col>
         </Row>
       </Container>
-    </AboutSectionWrapper>
+    </SectionWrapper>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {Container} from 'reactstrap'
 import Project from './Project'
 import StyledHeader from '../StyledHeader'
-import {Subtitle, ProjectsSectionWrapper} from '../../styles/styled-components'
+import {Subtitle, SectionWrapper} from '../../styles/styled-components'
 import Shoppies from '../../images/shoppies.png'
 // import SideQuests from '../../images/side-quests.png'
 
@@ -26,7 +26,7 @@ const shoppiesStack = [
 
 function ProjectsSection() {
   return (
-    <ProjectsSectionWrapper id="projects">
+    <SectionWrapper id="projects">
       <Container>
         <StyledHeader>
           <Subtitle>Projects</Subtitle>
@@ -47,7 +47,7 @@ function ProjectsSection() {
           alt
         /> */}
       </Container>
-    </ProjectsSectionWrapper>
+    </SectionWrapper>
   )
 }
 

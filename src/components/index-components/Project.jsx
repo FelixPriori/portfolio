@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Col} from 'reactstrap'
-import {ProjectImage, ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../../styles/styled-components'
+import {ImageWithShadow, ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../../styles/styled-components'
 
 function Project({name, description, screenshot, slug, stack, alt}) {
   return (
@@ -17,12 +17,12 @@ function Project({name, description, screenshot, slug, stack, alt}) {
             <ul>{stack && stack.map(({tech, id}, i) => i >= 3 && <li key={id}>{tech}</li>)}</ul>
           </Col>
         </StackRow>
-        <StyledProjectLink className="btn btn-dark-outline" to={slug}>
+        <StyledProjectLink className="btn btn-red" to={slug}>
           View Project
         </StyledProjectLink>
       </Col>
-      <ImageColumn md={{size: 6, order: alt ? 1 : 2}}>
-        <ProjectImage src={screenshot} alt={`${name} screenshot`} />
+      <ImageColumn lg={{size: 6, order: alt ? 1 : 2}}>
+        <ImageWithShadow src={screenshot} className="img-fluid" alt={`${name} screenshot`} />
       </ImageColumn>
     </ProjectWrapper>
   )
