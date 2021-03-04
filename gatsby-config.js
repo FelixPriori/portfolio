@@ -10,6 +10,18 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: `FelixPriori's Portfolio`,
+        short_name: `Portfolio`,
+        start_url: `/`,
+        background_color: `#eceff4`,
+        theme_color: `#eceff4`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
