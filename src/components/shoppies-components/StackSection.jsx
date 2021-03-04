@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Col} from 'reactstrap'
+import {Row, Col, Container} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
 import {
   Subtitle,
@@ -49,35 +49,30 @@ function LogoBox() {
 function StackSection() {
   return (
     <SectionWrapper id="stack">
-      <StyledHeader>
-        <Subtitle>Stack</Subtitle>
-      </StyledHeader>
-      <Row>
-        <LogoBox />
+      <Container>
+        <StyledHeader>
+          <Subtitle>Stack</Subtitle>
+        </StyledHeader>
+        <Row>
+          <LogoBox />
 
-        <Col>
-          <Paragraph>
-            I used React hooks primarily because it is by far my most comfrotable stack, and thus it would play to my
-            strengths in the context of a challenge project. Additionally it makes it extremely fast to setup and
-            prototype an app.
-          </Paragraph>
-          <Paragraph>
-            I used Bootstrap to make the html structure and the responsive without having to resort to media queries and
-            keep the code cleaner.
-          </Paragraph>
-          <Paragraph>
-            Almost all of the styling was done with Styled-Components as it helps with semantically labeling the
-            structure without making actual React components. This made it so I could avoid using classes and de-cluster
-            the code and make it more explicit. For some of the more global styling and for overriding certain bootstrap
-            properties, I used SASS very sparingly.
-          </Paragraph>
-          <Paragraph>
-            I used React Testing Library to test the app as it is pre-installed with React already and comes with almost
-            everything I needed to test my app.
-          </Paragraph>
-          <Paragraph></Paragraph>
-        </Col>
-      </Row>
+          <Col>
+            <Paragraph>I used React hooks because it is extremely fast to setup and prototype an app.</Paragraph>
+            <Paragraph>
+              I used Bootstrap to make the html structure and the responsive without having to resort to media queries
+              and keep the code cleaner.
+            </Paragraph>
+            <Paragraph>
+              Most of the styling was done with Styled-Components. This allows me to avoid using classes, de-cluster the
+              code and make it more explicit.
+            </Paragraph>
+            <Paragraph>
+              I used React Testing Library to test the app as it is pre-installed with React already and comes with
+              almost everything I needed to test my app.
+            </Paragraph>
+          </Col>
+        </Row>
+      </Container>
     </SectionWrapper>
   )
 }
