@@ -1,10 +1,14 @@
 import styled, {css} from 'styled-components'
-import {Col, Row, Container} from 'reactstrap'
+import {Col, Row} from 'reactstrap'
 import {Link} from 'gatsby'
 
 const shadow = `1px 1px 10px #81a1c1, -1px -1px 10px #81a1c1, -1px 1px 10px #81a1c1, 1px -1px 10px #81a1c1`
 
 export const Main = styled.main``
+
+export const SectionWrapper = styled.section`
+  padding: 2em 0;
+`
 
 export const StyledLink = styled(Link)`
   color: #5e81ac;
@@ -45,7 +49,7 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.h2`
-  color: ${({isContact}) => (isContact ? '#eceff4' : '#5e81ac')};
+  color: ${({isContact}) => (isContact ? '#eceff4' : '')};
   text-shadow: ${({isContact}) => (isContact ? '5px 5px #5e81ac' : '5px 5px #ebcb8b')};
 `
 
@@ -79,11 +83,6 @@ export const Paragraph = styled.p`
   padding: 1em;
 `
 
-export const ProjectImage = styled.img`
-  max-height: 300px;
-  width: 100%;
-`
-
 export const ImageColumn = styled(Col)`
   display: flex;
   align-items: center;
@@ -91,9 +90,7 @@ export const ImageColumn = styled(Col)`
 
 export const HeaderContainer = styled.div`
   height: 100%;
-  padding: 3em 1em;
-  width: fit-content;
-  margin: 1em;
+  padding: 1em 0;
 `
 
 export const List = styled.ul`
@@ -107,10 +104,6 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   margin: 0.5em;
-`
-
-export const AboutSectionWrapper = styled.section`
-  padding: 3em 0;
 `
 
 export const StyledAvatar = styled.img`
@@ -145,7 +138,7 @@ export const TitleContainer = styled.div`
 `
 
 export const ProjectWrapper = styled(Row)`
-  padding: 0 1em 2em 1em;
+  padding: 1em 0;
 `
 
 export const StackRow = styled(Row)`
@@ -153,10 +146,6 @@ export const StackRow = styled(Row)`
   ul {
     margin-bottom: 0;
   }
-`
-
-export const ProjectsSectionWrapper = styled.section`
-  padding: 3em 0;
 `
 
 export const FormWrapper = styled(Col)``
@@ -167,6 +156,13 @@ export const ImageWithShadow = styled.img`
   box-shadow: ${shadow};
   height: ${({height}) => (height ? `${height}px` : '')};
   width: ${({width}) => (width ? `${width}px` : '')};
+  max-width: ${({maxWidth}) => (maxWidth ? `${maxWidth}px` : '')};
+  margin: 1em 0;
+`
+
+export const DivWithShadow = styled.div`
+  box-shadow: ${shadow};
+  background-color: #f8f9fa;
 `
 
 export const ReactSpinningLogo = styled.img`
@@ -209,10 +205,6 @@ export const LogoCol = styled(Col)`
   h3 {
     margin-left: 2em;
   }
-`
-
-export const SectionWrapper = styled(Container)`
-  padding: 3em 0;
 `
 
 export const LogoBoxCol = styled(Col)`
