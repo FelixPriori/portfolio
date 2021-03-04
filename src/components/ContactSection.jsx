@@ -15,7 +15,6 @@ function ContactSection() {
 
         <Row>
           <FormWrapper lg={6}>
-            <h3>Reach out</h3>
             <ContactForm />
           </FormWrapper>
         </Row>
