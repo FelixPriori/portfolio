@@ -16,19 +16,9 @@ function Navbar() {
           <BurgerMenu />
         </CustomToggle>
         <DropdownMenu>
-          <DropdownItem header>Quick Navigation</DropdownItem>
-
-          <DropdownItem divider />
-
           <CustomItem tag={Link} to="/">
             Home
           </CustomItem>
-
-          <DropdownItem divider />
-
-          <DropdownItem header>Projects</DropdownItem>
-
-          <DropdownItem divider />
 
           <CustomItem tag={Link} to="/shoppies">
             Shoppies
