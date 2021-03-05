@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components'
+import {OutboundLink} from 'gatsby-plugin-google-gtag'
 import {Col, Row} from 'reactstrap'
 import {Link} from 'gatsby'
 
@@ -23,7 +24,7 @@ export const StyledProjectLink = styled(Link)`
   margin: 1em;
 `
 
-export const StyledIconLink = styled.a`
+export const StyledIconLink = styled(OutboundLink)`
   color: #5e81ac;
   font-size: 20px;
   transition: 200ms;
@@ -184,7 +185,7 @@ export const Logo = styled.img`
   width: ${({width}) => (width ? `${width}px` : '')};
 `
 
-export const LogoLinkedContainer = styled.a`
+export const LogoLinkedContainer = styled(OutboundLink)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +260,7 @@ export const FooterWrapper = styled.footer`
   padding-top: 4em;
 `
 
-export const GithubLink = styled.a`
+export const GithubLink = styled(OutboundLink)`
   display: flex;
   align-items: center;
   padding: 0;

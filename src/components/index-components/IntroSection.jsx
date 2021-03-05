@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
+import {OutboundLink} from 'gatsby-plugin-google-gtag'
 import {Container, Row} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
 import Avatar from './Avatar'
@@ -23,14 +24,14 @@ function IntroSection() {
               <Link className="btn btn-blue" to="#contact">
                 Contact
               </Link>
-              <a
+              <OutboundLink
                 className="btn btn-yellow"
                 href="https://resume.creddle.io/resume/1upmg1yxkj4"
                 target="_blank"
                 rel="noreferrer"
               >
                 Resume
-              </a>
+              </OutboundLink>
             </ButtonContainer>
           </TextColumn>
           <AvatarColumn>
