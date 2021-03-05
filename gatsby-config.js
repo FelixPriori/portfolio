@@ -18,7 +18,19 @@ module.exports = {
         background_color: `#eceff4`,
         theme_color: `#eceff4`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/favicon-32x32.png`,
+        icons: [
+          {
+            src: `src/images/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/android-chrome-256x256.png`,
+            sizes: `256x256`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     {
