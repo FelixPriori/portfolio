@@ -166,9 +166,23 @@ export const DivWithShadow = styled.div`
   background-color: #f8f9fa;
 `
 
+export const LogoBulletList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 1em 0;
+`
+
+export const LogoBulletItem = styled.li`
+  display: flex;
+  align-items: center;
+  > img {
+    margin-right: 1em;
+  }
+`
+
 export const ReactSpinningLogo = styled.img`
-  height: 60px;
-  width: 60px;
+  height: ${({height}) => (height ? `${height}px` : '60px')};
+  width: ${({width}) => (width ? `${width}px` : '60px')};
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
