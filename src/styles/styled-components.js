@@ -3,7 +3,7 @@ import {OutboundLink} from 'gatsby-plugin-google-gtag'
 import {Col, Row} from 'reactstrap'
 import {Link} from 'gatsby'
 
-const shadow = `1px 1px 10px #81a1c1, -1px -1px 10px #81a1c1, -1px 1px 10px #81a1c1, 1px -1px 10px #81a1c1`
+const shadow = `1px 1px 10px black`
 
 export const Main = styled.main``
 
@@ -107,12 +107,6 @@ export const ListItem = styled.li`
   margin: 0.5em;
 `
 
-export const StyledAvatar = styled.img`
-  padding: 3em 0;
-  border-radius: 50%;
-  max-width: 290px;
-`
-
 export const ErrorMessage = styled.div`
   color: #bf616a;
 `
@@ -159,11 +153,13 @@ export const ImageWithShadow = styled.img`
   width: ${({width}) => (width ? `${width}px` : '')};
   max-width: ${({maxWidth}) => (maxWidth ? `${maxWidth}px` : '')};
   margin: 1em 0;
+  border-radius: 5px;
 `
 
 export const DivWithShadow = styled.div`
   box-shadow: ${shadow};
   background-color: #f8f9fa;
+  border-radius: 5px;
 `
 
 export const LogoBulletList = styled.ul`
