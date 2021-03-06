@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
         name: `FelixPriori's Portfolio`,
         short_name: `Portfolio`,
@@ -45,7 +45,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         policy: [{userAgent: '*', allow: '/'}],
       },
@@ -60,6 +60,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    'gatsby-plugin-svgr',
+    `gatsby-plugin-svgr`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
