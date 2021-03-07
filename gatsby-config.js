@@ -33,6 +33,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -42,6 +43,13 @@ module.exports = {
         pluginConfig: {
           head: true,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images/`,
       },
     },
     {

@@ -37,9 +37,13 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.15.4",
+    "react-modal": "^3.12.1",
     "reactstrap": "^8.9.0",
     "sass": "^1.32.8",
     "styled-components": "^5.2.1",
     "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.6"
   }
 }
