@@ -75,7 +75,7 @@ export const ButtonContainer = styled.div`
   margin-left: 0.5em;
 
   & > a {
-    margin-right: 1em;
+    margin: 0.5em;
   }
 `
 
