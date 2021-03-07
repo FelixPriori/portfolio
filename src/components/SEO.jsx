@@ -50,7 +50,9 @@ function SEO({description, keywords, title, image, siteUrl, author}) {
                   }
                 : [],
             )}
-          />
+          >
+            <html lang="en" />
+          </Helmet>
         )
       }}
     />
