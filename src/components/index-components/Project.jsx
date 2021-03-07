@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Col} from 'reactstrap'
+import {StaticImage} from 'gatsby-plugin-image'
 import {ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../../styles/styled-components'
-import ImageModal from '../ImageModal'
 
 function Project({name, description, screenshot, slug, stack, alt}) {
   return (
@@ -23,7 +23,13 @@ function Project({name, description, screenshot, slug, stack, alt}) {
         </StyledProjectLink>
       </Col>
       <ImageColumn lg={{size: 6, order: alt ? 1 : 2}}>
-        <ImageModal imagePath="shoppies.png" alt="screenshot" />
+        <StaticImage
+          style={{boxShadow: `1px 1px 10px black`, borderRadius: '5px'}}
+          imgStyle={{borderRadius: '5px'}}
+          src="../../images/shoppies.png"
+          alt="Screenshot of shoppies' landing page"
+          objectFit="contain"
+        />
       </ImageColumn>
     </ProjectWrapper>
   )

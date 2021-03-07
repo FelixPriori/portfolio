@@ -10,7 +10,7 @@ import {
   SubSection,
   DivWithShadow,
 } from '../../styles/styled-components'
-import ImageModal from '../ImageModal'
+import {StaticImage} from 'gatsby-plugin-image'
 
 function MessagesPreview() {
   return (
@@ -102,7 +102,13 @@ function ExtraFeaturesSection() {
             </Col>
             <Col>
               <PostersContainer>
-                <ImageModal imagePath="shoppies-poster.png" alt="Shoppies Landing" />
+                <StaticImage
+                  style={{boxShadow: `1px 1px 10px black`, borderRadius: '5px'}}
+                  imgStyle={{borderRadius: '5px'}}
+                  src="../../images/shoppies-poster.png"
+                  alt="Shoppies Posters"
+                  objectFit="contain"
+                />
               </PostersContainer>
             </Col>
           </Row>
