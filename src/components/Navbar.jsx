@@ -33,7 +33,7 @@ export default Navbar
 
 const NavbarWrapper = styled.nav`
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
