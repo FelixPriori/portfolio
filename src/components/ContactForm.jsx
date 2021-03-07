@@ -53,8 +53,11 @@ function ContactForm() {
       <input type="hidden" name="contact-form" value="contact" />
 
       <FormGroup>
-        <Label htmlFor="name">Name</Label>
+        <Label id="name-lbl" htmlFor="name">
+          Name
+        </Label>
         <Input
+          aria-labelledby="name-lbl"
           name="name"
           value={formValues.name}
           type="text"
@@ -66,9 +69,12 @@ function ContactForm() {
       </FormGroup>
 
       <FormGroup>
-        <Label htmlFor="email">Email</Label>
+        <Label id="email-lbl" htmlFor="email">
+          Email
+        </Label>
         <Input
           name="email"
+          aria-labelledby="email-lbl"
           value={formValues.email}
           type="email"
           placeholder="Your email"
@@ -79,9 +85,12 @@ function ContactForm() {
       </FormGroup>
 
       <FormGroup>
-        <Label htmlFor="message">Message</Label>
+        <Label id="message-lbl" htmlFor="message">
+          Message
+        </Label>
         <Input
           name="message"
+          aria-labelledby="message-lbl"
           value={formValues.message}
           type="textarea"
           placeholder="Type your message here..."
