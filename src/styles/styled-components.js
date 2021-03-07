@@ -65,7 +65,7 @@ export const TextColumn = styled(Col)`
   flex-direction: column;
 `
 
-export const BigText = styled.h3`
+export const BigText = styled.h2`
   display: flex;
   flex-direction: column;
 `
