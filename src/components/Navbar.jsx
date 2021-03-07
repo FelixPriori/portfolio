@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <NavbarWrapper>
       <Dropdown isOpen={dropdownOpen} toggle={toggle} direction="left">
-        <CustomToggle>
+        <CustomToggle aria-label="Toggle Navbar">
           <BurgerMenu />
         </CustomToggle>
         <DropdownMenu>
