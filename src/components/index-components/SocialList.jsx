@@ -5,10 +5,10 @@ import {ReactComponent as LinkedIn} from '../../images/logo-linkedin.svg'
 import {ReactComponent as Twitter} from '../../images/logo-twitter.svg'
 import {List, ListItem, StyledIconLink} from '../../styles/styled-components'
 
-function SocialListItem({link, children}) {
+function SocialListItem({link, label, children}) {
   return (
     <ListItem>
-      <StyledIconLink href={link} target="_blank" rel="noreferrer">
+      <StyledIconLink href={link} target="_blank" rel="noreferrer" aria-label={label}>
         {children}
       </StyledIconLink>
     </ListItem>
@@ -18,16 +18,16 @@ function SocialListItem({link, children}) {
 function SocialList() {
   return (
     <List>
-      <SocialListItem link="https://www.linkedin.com/in/felix-rioux-sabourin/">
+      <SocialListItem link="https://www.linkedin.com/in/felix-rioux-sabourin/" label="LinkedIn">
         <LinkedIn />
       </SocialListItem>
-      <SocialListItem link="https://github.com/FelixPriori/">
+      <SocialListItem link="https://github.com/FelixPriori/" label="Github">
         <GitHub />
       </SocialListItem>
-      <SocialListItem link="https://twitter.com/FelixPriori">
+      <SocialListItem link="https://twitter.com/FelixPriori" label="Twitter">
         <Twitter />
       </SocialListItem>
-      <SocialListItem link="https://www.instagram.com/felixpriori/">
+      <SocialListItem link="https://www.instagram.com/felixpriori/" label="Instagram">
         <Instagram />
       </SocialListItem>
     </List>
