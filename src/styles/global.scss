@@ -39,8 +39,9 @@ p {
 
 .btn {
   &.btn-blue {
+    border: 1px solid #2e3440;
     background-color: #88c0d0;
-    color: #434c5e;
+    color: #2e3440;
 
     &:hover {
       background-color: darken(#88c0d0, 10%);
@@ -48,6 +49,8 @@ p {
   }
 
   &.btn-yellow {
+    border: 1px solid #2e3440;
+
     background-color: $highlight;
     color: $font-color;
 
