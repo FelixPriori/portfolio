@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Col} from 'reactstrap'
-import {ImageWithShadow, ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../../styles/styled-components'
+import {ImageColumn, ProjectWrapper, StackRow, StyledProjectLink} from '../../styles/styled-components'
+import ImageModal from '../ImageModal'
 
 function Project({name, description, screenshot, slug, stack, alt}) {
   return (
@@ -22,7 +23,7 @@ function Project({name, description, screenshot, slug, stack, alt}) {
         </StyledProjectLink>
       </Col>
       <ImageColumn lg={{size: 6, order: alt ? 1 : 2}}>
-        <ImageWithShadow src={screenshot} className="img-fluid" alt={`${name} screenshot`} />
+        <ImageModal imagePath="shoppies.png" alt="screenshot" />
       </ImageColumn>
     </ProjectWrapper>
   )

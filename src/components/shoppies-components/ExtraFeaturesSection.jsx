@@ -6,12 +6,11 @@ import {
   Paragraph,
   SectionWrapper,
   MessagePreviewList,
-  ImageWithShadow,
   PostersContainer,
   SubSection,
   DivWithShadow,
 } from '../../styles/styled-components'
-import Poster from '../../images/shoppies-poster.png'
+import ImageModal from '../ImageModal'
 
 function MessagesPreview() {
   return (
@@ -103,7 +102,7 @@ function ExtraFeaturesSection() {
             </Col>
             <Col>
               <PostersContainer>
-                <ImageWithShadow src={Poster} height={300} alt="shoppies posters" />
+                <ImageModal imagePath="shoppies-poster.png" alt="Shoppies Landing" />
               </PostersContainer>
             </Col>
           </Row>

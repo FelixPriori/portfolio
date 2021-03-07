@@ -1,15 +1,8 @@
 import React from 'react'
 import {Container, Button} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
-import {
-  Title,
-  ImageWithShadow,
-  Showcase,
-  ButtonContainer,
-  RedLight,
-  SectionWrapper,
-} from '../../styles/styled-components'
-import ShoppiesLanding from '../../images/shoppies.png'
+import {Title, Showcase, ButtonContainer, RedLight, SectionWrapper} from '../../styles/styled-components'
+import ImageModal from '../ImageModal'
 
 function IntroSection() {
   return (
@@ -19,7 +12,7 @@ function IntroSection() {
           <Title>Shoppies</Title>
         </StyledHeader>
         <Showcase>
-          <ImageWithShadow src={ShoppiesLanding} alt="Shoppies Landing" className="img-fluid" />
+          <ImageModal imagePath="shoppies.png" alt="Shoppies Landing" />
         </Showcase>
         <ButtonContainer>
           <Button color="red" href="https://felix-shoppies.netlify.app/" target="_blank" rel="noreferrer">

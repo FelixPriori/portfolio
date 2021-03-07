@@ -1,8 +1,8 @@
 import React from 'react'
 import {Container, Row, Col} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
-import {Subtitle, Paragraph, ImageWithShadow, SectionWrapper} from '../../styles/styled-components'
-import Nominations from '../../images/shoppies-nominations.png'
+import {Subtitle, Paragraph, SectionWrapper} from '../../styles/styled-components'
+import ImageModal from '../ImageModal'
 
 function SummarySection() {
   return (
@@ -25,7 +25,7 @@ function SummarySection() {
             </Paragraph>
           </Col>
           <Col>
-            <ImageWithShadow src={Nominations} className="img-fluid" />
+            <ImageModal imagePath="shoppies-nominations.png" alt="Shoppies Landing" />
           </Col>
         </Row>
       </Container>
