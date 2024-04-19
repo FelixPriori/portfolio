@@ -1,11 +1,10 @@
 import React from 'react'
-import {ReactComponent as GitHub} from '../../images/logo-github.svg'
-import {ReactComponent as Instagram} from '../../images/logo-instagram.svg'
-import {ReactComponent as LinkedIn} from '../../images/logo-linkedin.svg'
-import {ReactComponent as Twitter} from '../../images/logo-twitter.svg'
-import {List, ListItem, StyledIconLink} from '../../styles/styled-components'
+import { ReactComponent as GitHub } from '../../images/logo-github.svg'
+import { ReactComponent as Instagram } from '../../images/logo-instagram.svg'
+import { ReactComponent as LinkedIn } from '../../images/logo-linkedin.svg'
+import { List, ListItem, StyledIconLink } from '../../styles/styled-components'
 
-function SocialListItem({link, label, children}) {
+function SocialListItem({ link, label, children }) {
   return (
     <ListItem>
       <StyledIconLink href={link} target="_blank" rel="noreferrer" aria-label={label}>
@@ -23,9 +22,6 @@ function SocialList() {
       </SocialListItem>
       <SocialListItem link="https://github.com/FelixPriori/" label="Github">
         <GitHub />
-      </SocialListItem>
-      <SocialListItem link="https://twitter.com/FelixPriori" label="Twitter">
-        <Twitter />
       </SocialListItem>
       <SocialListItem link="https://www.instagram.com/felixpriori/" label="Instagram">
         <Instagram />
