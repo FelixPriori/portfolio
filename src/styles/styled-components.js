@@ -298,6 +298,14 @@ export const CustomInput = styled.input`
   border-radius: 4px;
 `
 
+export const CustomTextarea = styled.textarea`
+  display: block;
+  width: 100%;
+  padding: 0.33rem 1.25rem;
+  border: 2px solid ${({ $error }) => $error ? '#bf616a' : '#2e3440'};
+  border-radius: 4px;
+`
+
 export const CustomLabel = styled.label`
   margin-bottom: 0.25rem;
   margin-left: 2px;

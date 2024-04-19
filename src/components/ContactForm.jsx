@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { navigate } from 'gatsby'
 import axios from 'axios'
-import { ErrorMessage, CustomInput, CustomLabel, FormInputWrapper } from '../styles/styled-components'
+import { ErrorMessage, CustomInput, CustomLabel, FormInputWrapper, CustomTextarea } from '../styles/styled-components'
 import { Button } from 'reactstrap'
 
 function ContactForm() {
@@ -66,11 +66,13 @@ function ContactForm() {
         <CustomLabel id="message-lbl" htmlFor="message">
           Message
         </CustomLabel>
-        <CustomInput
+        <CustomTextarea
           aria-labelledby="message-lbl"
           type="textarea"
           placeholder="Type your message here..."
           $error={errors?.message}
+          rows="6"
+          maxlength={500}
           {...register("message", { required: "Message is required" })}
         />
         {errors?.message && <ErrorMessage>Message is required</ErrorMessage>}
