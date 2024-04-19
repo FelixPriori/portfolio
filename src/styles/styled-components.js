@@ -1,7 +1,7 @@
-import styled, {css} from 'styled-components'
-import {OutboundLink} from 'gatsby-plugin-google-gtag'
-import {Col, Row} from 'reactstrap'
-import {Link} from 'gatsby'
+import styled, { css } from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Col, Row } from 'reactstrap'
+import { Link } from 'gatsby'
 
 const shadow = `1px 1px 10px black`
 
@@ -50,8 +50,8 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.h2`
-  color: ${({isContact}) => (isContact ? '#eceff4' : '')};
-  text-shadow: ${({isContact}) => (isContact ? '5px 5px #5e81ac' : '5px 5px #ebcb8b')};
+  color: ${({ $isContact }) => ($isContact ? '#eceff4' : '')};
+  text-shadow: ${({ $isContact }) => ($isContact ? '5px 5px #5e81ac' : '5px 5px #ebcb8b')};
 `
 
 export const AvatarColumn = styled(Col)`
@@ -115,9 +115,9 @@ export const ContactSectionWrapper = styled.section`
   padding: 4em 0;
   color: #eceff4;
   ${(props) =>
-    props.bg &&
+    props.$bg &&
     css`
-      background-image: url(${props.bg});
+      background-image: url(${props.$bg});
       background-attachment: scroll;
       background-position: center;
       background-repeat: no-repeat;
@@ -149,9 +149,9 @@ export const Showcase = styled.div``
 
 export const ImageWithShadow = styled.img`
   box-shadow: ${shadow};
-  height: ${({height}) => (height ? `${height}px` : '')};
-  width: ${({width}) => (width ? `${width}px` : '')};
-  max-width: ${({maxWidth}) => (maxWidth ? `${maxWidth}px` : '')};
+  height: ${({ height }) => (height ? `${height}px` : '')};
+  width: ${({ width }) => (width ? `${width}px` : '')};
+  max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '')};
   margin: 1em 0;
   border-radius: 5px;
 `
@@ -177,8 +177,8 @@ export const LogoBulletItem = styled.li`
 `
 
 export const ReactSpinningLogo = styled.img`
-  height: ${({height}) => (height ? `${height}px` : '60px')};
-  width: ${({width}) => (width ? `${width}px` : '60px')};
+  height: ${({ height }) => (height ? `${height}px` : '60px')};
+  width: ${({ width }) => (width ? `${width}px` : '60px')};
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
@@ -191,8 +191,8 @@ export const ReactSpinningLogo = styled.img`
 `
 
 export const Logo = styled.img`
-  height: ${({height}) => (height ? `${height}px` : '')};
-  width: ${({width}) => (width ? `${width}px` : '')};
+  height: ${({ height }) => (height ? `${height}px` : '')};
+  width: ${({ width }) => (width ? `${width}px` : '')};
 `
 
 export const LogoLinkedContainer = styled(OutboundLink)`
@@ -288,4 +288,21 @@ export const GithubLink = styled(OutboundLink)`
       fill: #81a1c1;
     }
   }
+`
+
+export const CustomInput = styled.input`
+  display: block;
+  width: 100%;
+  padding: 0.33rem 1.25rem;
+  border: 2px solid ${({ $error }) => $error ? '#bf616a' : '#2e3440'};
+  border-radius: 4px;
+`
+
+export const CustomLabel = styled.label`
+  margin-bottom: 0.25rem;
+  margin-left: 2px;
+`
+
+export const FormInputWrapper = styled.div`
+  margin: 1.5rem 0;
 `

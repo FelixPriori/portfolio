@@ -1,30 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import { navigate } from 'gatsby'
-import { yupResolver } from '@hookform/resolvers/yup'
 import axios from 'axios'
-import * as yup from 'yup'
-import { Form, Label, Input, Button, FormGroup } from 'reactstrap'
-import { ErrorMessage } from '../styles/styled-components'
-
-const schema = yup.object().shape({
-  name: yup.string().required(),
-  email: yup.string().required(),
-  subject: yup.string().required(),
-  message: yup.string().required(),
-})
+import { ErrorMessage, CustomInput, CustomLabel, FormInputWrapper } from '../styles/styled-components'
+import { Button } from 'reactstrap'
 
 function ContactForm() {
-  const [formValues, setFormValues] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-  const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema), reValidateMode: 'onTouched' })
-
-  const onNameChange = ({ target }) => setFormValues((prevValues) => ({ ...prevValues, name: target.value }))
-  const onEmailChange = ({ target }) => setFormValues((prevValues) => ({ ...prevValues, email: target.value }))
-  const onMessageChange = ({ target }) => setFormValues((prevValues) => ({ ...prevValues, message: target.value }))
+  const { register, handleSubmit, formState: { errors } } = useForm()
 
   const encode = (data) => {
     return Object.keys(data)
@@ -32,19 +14,19 @@ function ContactForm() {
       .join('&')
   }
 
-  const onSubmit = () => {
+  const onSubmit = async (data) => {
     axios('/', {
       method: 'post',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      data: encode({ 'form-name': 'contact-form', ...formValues }),
+      data: encode({ 'form-name': 'contact-form', ...data }),
     })
       .then(() => navigate('/success/'))
       .catch((error) => alert(error))
   }
 
   return (
-    <Form
-      onSubmit={handleSubmit(onSubmit)}
+    <form
+      onSubmit={(e) => handleSubmit(onSubmit)(e)}
       name="contact-form"
       method="post"
       data-netlify="true"
@@ -52,58 +34,52 @@ function ContactForm() {
     >
       <input type="hidden" name="contact-form" value="contact" />
 
-      <FormGroup>
-        <Label id="name-lbl" htmlFor="name">
+      <FormInputWrapper>
+        <CustomLabel id="name-lbl" htmlFor="name">
           Name
-        </Label>
-        <Input
+        </CustomLabel>
+        <CustomInput
           aria-labelledby="name-lbl"
-          name="name"
-          value={formValues?.name}
           type="text"
           placeholder="Your name"
-          onChange={onNameChange}
-          innerRef={register}
+          $error={errors?.name}
+          {...register("name", { required: "Name is required" })}
         />
         {errors?.name && <ErrorMessage>Name is required</ErrorMessage>}
-      </FormGroup>
+      </FormInputWrapper>
 
-      <FormGroup>
-        <Label id="email-lbl" htmlFor="email">
+      <FormInputWrapper>
+        <CustomLabel id="email-lbl" htmlFor="email">
           Email
-        </Label>
-        <Input
-          name="email"
+        </CustomLabel>
+        <CustomInput
           aria-labelledby="email-lbl"
-          value={formValues?.email}
           type="email"
-          placeholder="Your email"
-          onChange={onEmailChange}
-          innerRef={register}
+          placeholder="example@example.ca"
+          $error={errors?.email}
+          {...register("email", { required: "Email is required" })}
         />
         {errors?.email && <ErrorMessage>Email is required</ErrorMessage>}
-      </FormGroup>
+      </FormInputWrapper>
 
-      <FormGroup>
-        <Label id="message-lbl" htmlFor="message">
+      <FormInputWrapper>
+        <CustomLabel id="message-lbl" htmlFor="message">
           Message
-        </Label>
-        <Input
-          name="message"
+        </CustomLabel>
+        <CustomInput
           aria-labelledby="message-lbl"
-          value={formValues?.message}
           type="textarea"
           placeholder="Type your message here..."
-          onChange={onMessageChange}
-          innerRef={register}
+          $error={errors?.message}
+          {...register("message", { required: "Message is required" })}
         />
         {errors?.message && <ErrorMessage>Message is required</ErrorMessage>}
-      </FormGroup>
+      </FormInputWrapper>
 
-      <Button onClick={handleSubmit(onSubmit)} color="submit" type="submit">
+      <Button onClick={(e) => handleSubmit(onSubmit)(e)} color="submit" type="submit">
         Send
       </Button>
-    </Form>
+    </form>
   )
 }
 
