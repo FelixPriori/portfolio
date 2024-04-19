@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import {useForm} from 'react-hook-form'
-import {navigate} from 'gatsby'
-import {yupResolver} from '@hookform/resolvers/yup'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { navigate } from 'gatsby'
+import { yupResolver } from '@hookform/resolvers/yup'
 import axios from 'axios'
 import * as yup from 'yup'
-import {Form, Label, Input, Button, FormGroup} from 'reactstrap'
-import {ErrorMessage} from '../styles/styled-components'
+import { Form, Label, Input, Button, FormGroup } from 'reactstrap'
+import { ErrorMessage } from '../styles/styled-components'
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -20,11 +20,11 @@ function ContactForm() {
     email: '',
     message: '',
   })
-  const {register, handleSubmit, errors} = useForm({resolver: yupResolver(schema), reValidateMode: 'onTouched'})
+  const { register, handleSubmit, errors } = useForm({ resolver: yupResolver(schema), reValidateMode: 'onTouched' })
 
-  const onNameChange = ({target}) => setFormValues((prevValues) => ({...prevValues, name: target.value}))
-  const onEmailChange = ({target}) => setFormValues((prevValues) => ({...prevValues, email: target.value}))
-  const onMessageChange = ({target}) => setFormValues((prevValues) => ({...prevValues, message: target.value}))
+  const onNameChange = ({ target }) => setFormValues((prevValues) => ({ ...prevValues, name: target.value }))
+  const onEmailChange = ({ target }) => setFormValues((prevValues) => ({ ...prevValues, email: target.value }))
+  const onMessageChange = ({ target }) => setFormValues((prevValues) => ({ ...prevValues, message: target.value }))
 
   const encode = (data) => {
     return Object.keys(data)
@@ -35,8 +35,8 @@ function ContactForm() {
   const onSubmit = () => {
     axios('/', {
       method: 'post',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      data: encode({'form-name': 'contact-form', ...formValues}),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      data: encode({ 'form-name': 'contact-form', ...formValues }),
     })
       .then(() => navigate('/success/'))
       .catch((error) => alert(error))
@@ -59,13 +59,13 @@ function ContactForm() {
         <Input
           aria-labelledby="name-lbl"
           name="name"
-          value={formValues.name}
+          value={formValues?.name}
           type="text"
           placeholder="Your name"
           onChange={onNameChange}
           innerRef={register}
         />
-        {errors.name && <ErrorMessage>Name is required</ErrorMessage>}
+        {errors?.name && <ErrorMessage>Name is required</ErrorMessage>}
       </FormGroup>
 
       <FormGroup>
@@ -75,13 +75,13 @@ function ContactForm() {
         <Input
           name="email"
           aria-labelledby="email-lbl"
-          value={formValues.email}
+          value={formValues?.email}
           type="email"
           placeholder="Your email"
           onChange={onEmailChange}
           innerRef={register}
         />
-        {errors.email && <ErrorMessage>Email is required</ErrorMessage>}
+        {errors?.email && <ErrorMessage>Email is required</ErrorMessage>}
       </FormGroup>
 
       <FormGroup>
@@ -91,13 +91,13 @@ function ContactForm() {
         <Input
           name="message"
           aria-labelledby="message-lbl"
-          value={formValues.message}
+          value={formValues?.message}
           type="textarea"
           placeholder="Type your message here..."
           onChange={onMessageChange}
           innerRef={register}
         />
-        {errors.message && <ErrorMessage>Message is required</ErrorMessage>}
+        {errors?.message && <ErrorMessage>Message is required</ErrorMessage>}
       </FormGroup>
 
       <Button onClick={handleSubmit(onSubmit)} color="submit" type="submit">
