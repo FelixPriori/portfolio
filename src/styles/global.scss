@@ -1,110 +1,126 @@
+:root {
+	--color-light: #eceff4;
+	--color-dark: #2e3440;
+	--color-primary-dark: #3b4252;
+	--color-primary: #5e81ac;
+	--color-primary-light: #88c0d0;
+	--color-primary-lighter: #d8dee9;
+	--color-secondary: #bf616a;
+	--color-highlight-darkest: #3a3222;
+	--color-highlight-darker: #877248;
+	--color-highlight: #ebcb8b;
+	--color-shoppies-light: #f8f9fa;
+	--font-family: 'Nunito', sans-serif;
+	--font-family-header: 'Rowdies', sans-serif;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $body-color;
-  font-family: $main-font;
-  color: $font-color;
-  background-image: url('../images/diagonal-background.svg');
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-light);
+	font-family: var(--font-family);
+	color: var(--color-primary-dark);
 }
 
 h1 {
-  font-size: 50px;
-  margin: 0;
-  padding: 0;
+	font-weight: 700;
+	font-family: var(--font-family-header);
+	margin: 0;
+	padding: 0;
 }
 
 h2 {
-  font-size: 40px;
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h3 {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
 }
 
 p {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 // BUTTON OVERIDES
 
 .btn {
-  &.btn-blue {
-    border: 1px solid #2e3440;
-    background-color: #88c0d0;
-    color: #2e3440;
+	&.btn-blue {
+		border: 1px solid var(--color-dark);
+		background-color: var(--color-primary-light);
+		color: var(--color-dark);
 
-    &:hover {
-      background-color: darken(#88c0d0, 10%);
-    }
-  }
+		&:hover {
+			$primary-light: #88c0d0;
+			background-color: darken($primary-light, 10%);
+		}
+	}
 
-  &.btn-yellow {
-    border: 1px solid #2e3440;
+	&.btn-yellow {
+		border: 1px solid var(--color-primary-dark);
 
-    background-color: $highlight;
-    color: $font-color;
+		background-color: var(--color-highlight);
+		color: var(--color-primary-dark);
 
-    &:hover {
-      background-color: darken($highlight, 10%);
-      color: $font-color;
-    }
-  }
+		&:hover {
+			$highlight: #ebcb8b;
+			background-color: darken($highlight, 10%);
+			color: var(--color-primary-dark);
+		}
+	}
 
-  &.btn-dark-outline {
-    border: 1px solid $font-color;
-    color: $font-color;
+	&.btn-dark-outline {
+		border: 1px solid var(--color-primary-dark);
+		color: var(--color-primary-dark);
 
-    &:hover {
-      border: 1px solid #2e3440;
-      color: #2e3440;
-      transition: 200ms;
-    }
-  }
+		&:hover {
+			border: 1px solid var(--color-dark);
+			color: var(--color-dark);
+			transition: 200ms;
+		}
+	}
 
-  &.btn-submit {
-    background-color: $highlight;
-    color: #3b4252;
+	&.btn-submit {
+		background-color: var(--color-highlight);
+		color: var(--color-primary-dark);
 
-    &:hover {
-      background-color: darken($highlight, 10%);
-      transition: 200ms;
-    }
-  }
+		&:hover {
+			$highlight: #ebcb8b;
+			background-color: darken($highlight, 10%);
+			transition: 200ms;
+		}
+	}
 
-  &.btn-red {
-    border: 1px solid #bf616a;
-    color: #bf616a;
+	&.btn-red {
+		border: 1px solid var(--color-secondary);
+		color: var(--color-secondary);
 
-    div {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+		div {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
 
-      p {
-        margin: 0 0 0 1em;
-      }
-    }
+			p {
+				margin: 0 0 0 1em;
+			}
+		}
 
-    &:hover {
-      background-color: #bf616a;
-      color: $body-color;
+		&:hover {
+			background-color: var(--color-secondary);
+			color: var(--color-light);
 
-      div {
-        div {
-          box-shadow: 1px 1px 5px $body-color, -1px -1px 5px $body-color, -1px 1px 5px $body-color,
-            1px -1px 5px $body-color;
-        }
-      }
-    }
-  }
+			div {
+				div {
+					box-shadow: 1px 1px 5px var(--color-light),
+						-1px -1px 5px var(--color-light), -1px 1px 5px var(--color-light),
+						1px -1px 5px var(--color-light);
+				}
+			}
+		}
+	}
 }

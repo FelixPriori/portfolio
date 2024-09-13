@@ -3,26 +3,26 @@ import IntroSection from '../components/index-components/IntroSection'
 import AboutSection from '../components/index-components/AboutSection'
 import ProjectsSection from '../components/index-components/ProjectsSection'
 import ContactSection from '../components/ContactSection'
-import {Main} from '../styles/styled-components'
+import { Main } from '../styles/styled-components'
 import Navbar from '../components/Navbar'
 import SEO from '../components/SEO'
 
 function IndexPage() {
-  return (
-    <Main>
-      <SEO title="FelixPriori Porftolio" />
+	return (
+		<Main>
+			<SEO title="Felix's Porftolio" />
 
-      <Navbar />
+			{/* <Navbar /> */}
 
-      <IntroSection />
+			<IntroSection />
 
-      <AboutSection />
+			<AboutSection />
 
-      <ProjectsSection />
+			{/* <ProjectsSection /> */}
 
-      <ContactSection />
-    </Main>
-  )
+			<ContactSection />
+		</Main>
+	)
 }
 
 export default IndexPage

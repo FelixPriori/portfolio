@@ -1,47 +1,55 @@
 import React from 'react'
-import {Link} from 'gatsby'
-import {OutboundLink} from 'gatsby-plugin-google-gtag'
-import {Container, Row} from 'reactstrap'
 import StyledHeader from '../StyledHeader'
 import Avatar from './Avatar'
 import SocialList from './SocialList'
-import {TextColumn, Title, BigText, ButtonContainer, AvatarColumn, SectionWrapper} from '../../styles/styled-components'
+import {
+	TextColumn,
+	Title,
+	BigText,
+	ButtonContainer,
+	SectionWrapper,
+	CustomOutboundButton,
+	CustomButton,
+	HeroWrapper,
+	TextWrapper,
+	TextInnerWrapper,
+	AvatarWrapper,
+} from '../../styles/styled-components'
+import PowerLink, { PowerOutboundLink } from '../PowerLink'
+import styled from 'styled-components'
+import { Container } from 'reactstrap'
+import Pattern from '../../images/pattern.jpeg'
 
 function IntroSection() {
-  return (
-    <SectionWrapper>
-      <Container id="intro">
-        <StyledHeader>
-          <Title>Felix Rioux Sabourin</Title>
-        </StyledHeader>
-        <Row>
-          <TextColumn>
-            <BigText>
-              Web developer
-              <span>Portfolio</span>
-            </BigText>
-            <ButtonContainer>
-              <Link className="btn btn-blue" to="#contact">
-                Contact
-              </Link>
-              <OutboundLink
-                className="btn btn-yellow"
-                href="https://resume.creddle.io/resume/1upmg1yxkj4"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Resume
-              </OutboundLink>
-            </ButtonContainer>
-          </TextColumn>
-          <AvatarColumn>
-            <Avatar />
-            <SocialList />
-          </AvatarColumn>
-        </Row>
-      </Container>
-    </SectionWrapper>
-  )
+	return (
+		<SectionWrapper>
+			<Container>
+				<HeroWrapper>
+					<TextWrapper>
+						<TextInnerWrapper>
+							<Title $bg={Pattern}>Felix Rioux Sabourin</Title>
+							<BigText>Front-End Software Developer</BigText>
+						</TextInnerWrapper>
+					</TextWrapper>
+					<AvatarWrapper>
+						<Avatar />
+						<SocialList />
+						<ButtonContainer>
+							<PowerLink to="#contact">Contact</PowerLink>
+							<PowerOutboundLink
+								href="https://resume.creddle.io/resume/1upmg1yxkj4"
+								target="_blank"
+								rel="noreferrer"
+								color="highlight"
+							>
+								Resume
+							</PowerOutboundLink>
+						</ButtonContainer>
+					</AvatarWrapper>
+				</HeroWrapper>
+			</Container>
+		</SectionWrapper>
+	)
 }
 
 export default IntroSection
