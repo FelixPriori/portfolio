@@ -7,6 +7,7 @@ import WorkSection from '../components/index-components/WorkSection'
 import { Main } from '../styles/styled-components'
 // import Navbar from '../components/Navbar'
 import Seo from '../components/SEO'
+import TrainingSection from '../components/index-components/TrainingSection'
 
 export const Head = () => <Seo title="Felix's Porftolio" />
 
@@ -20,6 +21,8 @@ function IndexPage() {
 			<AboutSection />
 
 			<WorkSection />
+
+			<TrainingSection />
 
 			{/* <ProjectsSection /> */}
 

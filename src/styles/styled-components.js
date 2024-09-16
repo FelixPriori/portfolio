@@ -168,6 +168,12 @@ export const Paragraph = styled.p`
 	}
 `
 
+export const Position = styled(Paragraph)`
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+`
+
 export const ImageColumn = styled(Col)`
 	display: flex;
 	align-items: center;

@@ -25,7 +25,6 @@ export const workData = [
 	},
 	{
 		companyName: 'The future',
-		position: '?',
 		dateRange: '2024 - ?',
 		descriptionTitle: 'Next steps',
 		description:

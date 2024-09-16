@@ -3,34 +3,29 @@ import {
 	Paragraph,
 	CompanyName,
 	DateRange,
-	Mark,
 	WorkFeatureWrapper,
 	WorkLogoWrapper,
 	Position,
 } from '../../styles/styled-components'
-import WorkLogo from './WorkLogo'
+import TrainingLogo from './TrainingLogo'
 
-export default function WorkFeature({
+export default function TrainingFeature({
 	companyName,
-	position,
+	certificate,
 	dateRange,
-	descriptionTitle,
 	description,
-	logoPath,
 }) {
 	return (
 		<WorkFeatureWrapper>
 			<WorkLogoWrapper>
-				<WorkLogo workplace={companyName} />
+				<TrainingLogo company={companyName} />
 				<div>
 					<CompanyName>{companyName}</CompanyName>
-					<Position>{position}</Position>
+					<Position>{certificate}</Position>
 					<DateRange>{dateRange}</DateRange>
 				</div>
 			</WorkLogoWrapper>
-			<Paragraph>
-				<Mark>{descriptionTitle}</Mark>. {description}
-			</Paragraph>
+			<Paragraph>{description}</Paragraph>
 		</WorkFeatureWrapper>
 	)
 }
