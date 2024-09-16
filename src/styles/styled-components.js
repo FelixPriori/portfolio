@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Col, Row } from 'reactstrap'
 import { Link } from 'gatsby'
@@ -8,10 +8,11 @@ const shadow = `1px 1px 10px var(--color-dark)`
 export const Main = styled.main``
 
 export const SectionWrapper = styled.section`
-	padding: 2rem;
-
 	&:first-of-type {
 		padding-top: 4rem;
+	}
+	&:last-of-type {
+		padding-bottom: 4rem;
 	}
 `
 
@@ -96,7 +97,7 @@ export const Title = styled.h1`
 	background-repeat: repeat;
 	color: transparent;
 	background-clip: text;
-	text-shadow: 0px 4px 10px var(--color-dark);
+	/* text-shadow: 0px 4px 10px var(--color-dark); */
 
 	@media (max-width: 768px) {
 		font-size: clamp(2.5rem, 1.7857rem + 3.5714vw, 3.5rem);
@@ -127,6 +128,23 @@ export const Subtitle = styled.h2`
 		background-color: var(--color-primary-light);
 		border-radius: 6px 0 6px 0;
 	}
+`
+
+export const WorkFeatureWrapper = styled.div``
+
+export const WorkLogoWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.5rem;
+`
+
+export const CompanyName = styled.h3`
+	font-size: clamp(1.25rem, 0.6424rem + 1.2658vw, 1.75rem);
+`
+
+export const DateRange = styled.p`
+	font-style: italic;
 `
 
 export const TextColumn = styled(Col)`
@@ -177,17 +195,10 @@ export const ErrorMessage = styled.div`
 	color: var(--color-secondary);
 `
 
-export const ContactSectionWrapper = styled.section`
+export const ContactSectionWrapper = styled.footer`
 	padding: 4em 0;
 	color: var(--color-light);
-	${props =>
-		props.$bg &&
-		css`
-			background-image: url(${props.$bg});
-			background-attachment: scroll;
-			background-position: center;
-			background-repeat: no-repeat;
-		`}
+	background-color: var(--color-primary-dark);
 
 	a {
 		color: var(--color-light);
@@ -370,26 +381,38 @@ export const ButtonContainer = styled.div`
 `
 
 export const CustomInput = styled.input`
+	padding: 0.75rem 1.25rem;
 	display: block;
 	width: 100%;
-	padding: 0.33rem 1.25rem;
 	border: 2px solid
 		${({ $error }) => ($error ? 'var(--color-secondary)' : 'var(--color-dark)')};
-	border-radius: 4px;
+	border-radius: 0.375rem;
+
+	&:focus-within {
+		outline: 2px solid var(--color-highlight);
+		outline-offset: 1px;
+	}
 `
 
 export const CustomTextarea = styled.textarea`
 	display: block;
 	width: 100%;
-	padding: 0.33rem 1.25rem;
+	padding: 0.75rem 1.25rem;
 	border: 2px solid
 		${({ $error }) => ($error ? 'var(--color-secondary)' : 'var(--color-dark)')};
-	border-radius: 4px;
+	border-radius: 0.375rem;
+
+	&:focus-within {
+		outline: 2px solid var(--color-highlight);
+		outline-offset: 1px;
+	}
 `
 
 export const CustomLabel = styled.label`
 	margin-bottom: 0.25rem;
 	margin-left: 2px;
+	font-size: 1.15rem;
+	font-weight: 600;
 `
 
 export const FormInputWrapper = styled.div`
@@ -408,4 +431,9 @@ export const Mark = styled.mark`
 		rgba(235, 203, 139, 0.5)
 	);
 	box-decoration-break: clone;
+`
+
+export const SubmitButtonWrapper = styled.div`
+	display: flex;
+	justify-content: flex-end;
 `

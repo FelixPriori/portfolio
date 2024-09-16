@@ -1,10 +1,11 @@
 import React from 'react'
-import { FooterWrapper, GithubLink } from '../styles/styled-components'
+import { Container } from 'reactstrap'
+import { GithubLink } from '../styles/styled-components'
 import { ReactComponent as Github } from '../images/logo-github.svg'
 
 function Footer() {
 	return (
-		<FooterWrapper>
+		<Container style={{ marginTop: '1rem' }}>
 			<p>&#169; Felix Rioux Sabourin 2024</p>
 
 			<GithubLink
@@ -15,7 +16,7 @@ function Footer() {
 				Source Code
 				<Github />
 			</GithubLink>
-		</FooterWrapper>
+		</Container>
 	)
 }
 

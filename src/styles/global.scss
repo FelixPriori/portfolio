@@ -50,8 +50,13 @@ p {
 // BUTTON OVERIDES
 
 .btn {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.2ch;
+	padding: 0.75rem 2rem;
+	transition: 200ms;
+
 	&.btn-blue {
-		border: 1px solid var(--color-dark);
 		background-color: var(--color-primary-light);
 		color: var(--color-dark);
 
@@ -62,8 +67,6 @@ p {
 	}
 
 	&.btn-yellow {
-		border: 1px solid var(--color-primary-dark);
-
 		background-color: var(--color-highlight);
 		color: var(--color-primary-dark);
 
@@ -81,7 +84,6 @@ p {
 		&:hover {
 			border: 1px solid var(--color-dark);
 			color: var(--color-dark);
-			transition: 200ms;
 		}
 	}
 
@@ -92,7 +94,6 @@ p {
 		&:hover {
 			$highlight: #ebcb8b;
 			background-color: darken($highlight, 10%);
-			transition: 200ms;
 		}
 	}
 

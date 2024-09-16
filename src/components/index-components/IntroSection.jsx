@@ -1,22 +1,18 @@
 import React from 'react'
-import StyledHeader from '../StyledHeader'
 import Avatar from './Avatar'
 import SocialList from './SocialList'
 import {
-	TextColumn,
 	Title,
 	BigText,
 	ButtonContainer,
 	SectionWrapper,
-	CustomOutboundButton,
-	CustomButton,
 	HeroWrapper,
 	TextWrapper,
 	TextInnerWrapper,
 	AvatarWrapper,
 } from '../../styles/styled-components'
-import PowerLink, { PowerOutboundLink } from '../PowerLink'
-import styled from 'styled-components'
+import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { Container } from 'reactstrap'
 import Pattern from '../../images/pattern.jpeg'
 
@@ -35,15 +31,17 @@ function IntroSection() {
 						<Avatar />
 						<SocialList />
 						<ButtonContainer>
-							<PowerLink to="#contact">Contact</PowerLink>
-							<PowerOutboundLink
+							<Link className="btn btn-blue" to="#contact">
+								Contact
+							</Link>
+							<OutboundLink
 								href="https://resume.creddle.io/resume/1upmg1yxkj4"
 								target="_blank"
 								rel="noreferrer"
-								color="highlight"
+								className="btn btn-yellow"
 							>
 								Resume
-							</PowerOutboundLink>
+							</OutboundLink>
 						</ButtonContainer>
 					</AvatarWrapper>
 				</HeroWrapper>

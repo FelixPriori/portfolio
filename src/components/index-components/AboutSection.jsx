@@ -33,17 +33,17 @@ function AboutSection() {
 				</StyledHeader>
 				<Paragraph>
 					With over <Mark>four years of experience</Mark> in front-end
-					development, I am a <Mark>dynamic professional</Mark> and an{' '}
-					<Mark>arts-oriented individual</Mark> captivated by the transformative
-					power of programming to bring <Mark>ideas to life</Mark>. I have
-					contributed to <Mark>over a dozen client projects</Mark> across a{' '}
+					development, I am a dynamic professional and an arts-oriented
+					individual captivated by the transformative power of programming to
+					bring ideas to life. I have contributed to{' '}
+					<Mark>over a dozen client projects</Mark> across a{' '}
 					<Mark>wide range of industries</Mark>, and I always have a passion
 					project ongoing.
 				</Paragraph>
 				<Paragraph>
-					I am <Mark>passionate about coding</Mark> and always seek new ways to
-					improve my craft. I love to work in <Mark>tight-knit teams</Mark> and
-					find extreme satisfaction in{' '}
+					I am passionate about coding and always seek new ways to improve my
+					craft. I love to work in <Mark>tight-knit teams</Mark> and find
+					extreme satisfaction in{' '}
 					<Mark>finding a great solution to a challenging problem</Mark>.
 				</Paragraph>
 				<StyledHeader>

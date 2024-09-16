@@ -1,34 +1,34 @@
 import React from 'react'
-import {Main} from '../styles/styled-components'
+import { Main } from '../styles/styled-components'
 import ContactSection from '../components/ContactSection'
 import IntroSection from '../components/shoppies-components/IntroSection'
 import SummarySection from '../components/shoppies-components/SummarySection'
 import StackSection from '../components/shoppies-components/StackSection'
 import ExtraFeaturesSection from '../components/shoppies-components/ExtraFeaturesSection'
 import ConclusionSection from '../components/shoppies-components/ConclusionSection'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 import Navbar from '../components/Navbar'
 
 function ShoppiesPage() {
-  return (
-    <Main>
-      <SEO title="Shoppies | FelixPriori Porftolio" />
+	return (
+		<Main>
+			<Seo title="Shoppies | FelixPriori Porftolio" />
 
-      <Navbar />
+			<Navbar />
 
-      <IntroSection />
+			<IntroSection />
 
-      <SummarySection />
+			<SummarySection />
 
-      <StackSection />
+			<StackSection />
 
-      <ExtraFeaturesSection />
+			<ExtraFeaturesSection />
 
-      <ConclusionSection />
+			<ConclusionSection />
 
-      <ContactSection />
-    </Main>
-  )
+			<ContactSection />
+		</Main>
+	)
 }
 
 export default ShoppiesPage
