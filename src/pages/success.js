@@ -2,13 +2,13 @@ import * as React from 'react'
 import styled from 'styled-components'
 import StyledHeader from '../components/StyledHeader'
 import { Title, Main, StyledLink } from '../styles/styled-components'
-import Seo from '../components/Seo'
+import Seo from '../components/SEO'
+
+export const Head = () => <Seo title="Message Sent | FelixPriori Porftolio" />
 
 const SuccessPage = () => {
 	return (
 		<Main>
-			<Seo title="Message Sent | FelixPriori Porftolio" />
-
 			<StyledHeader>
 				<Title>Message sent successfully</Title>
 			</StyledHeader>

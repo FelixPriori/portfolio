@@ -9,7 +9,6 @@ import {
 	FormWrapper,
 	Paragraph,
 } from '../styles/styled-components'
-import ContactBackground from '../images/contact-background.svg'
 
 function ContactSection() {
 	return (

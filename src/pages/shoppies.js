@@ -6,14 +6,14 @@ import SummarySection from '../components/shoppies-components/SummarySection'
 import StackSection from '../components/shoppies-components/StackSection'
 import ExtraFeaturesSection from '../components/shoppies-components/ExtraFeaturesSection'
 import ConclusionSection from '../components/shoppies-components/ConclusionSection'
-import Seo from '../components/Seo'
+import Seo from '../components/SEO'
 import Navbar from '../components/Navbar'
+
+export const Head = () => <Seo title="Shoppies | FelixPriori Porftolio" />
 
 function ShoppiesPage() {
 	return (
 		<Main>
-			<Seo title="Shoppies | FelixPriori Porftolio" />
-
 			<Navbar />
 
 			<IntroSection />

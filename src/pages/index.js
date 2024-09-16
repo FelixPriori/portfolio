@@ -6,13 +6,13 @@ import ContactSection from '../components/ContactSection'
 import WorkSection from '../components/index-components/WorkSection'
 import { Main } from '../styles/styled-components'
 // import Navbar from '../components/Navbar'
-import Seo from '../components/Seo'
+import Seo from '../components/SEO'
+
+export const Head = () => <Seo title="Felix's Porftolio" />
 
 function IndexPage() {
 	return (
 		<Main>
-			<Seo title="Felix's Porftolio" />
-
 			{/* <Navbar /> */}
 
 			<IntroSection />
