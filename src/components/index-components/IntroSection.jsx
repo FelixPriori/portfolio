@@ -24,7 +24,7 @@ function IntroSection() {
 					<TextWrapper>
 						<TextInnerWrapper>
 							<Title $bg={Pattern}>Felix Rioux Sabourin</Title>
-							<BigText>Front-End Software Developer</BigText>
+							<BigText>Professional Web Developer</BigText>
 						</TextInnerWrapper>
 					</TextWrapper>
 					<AvatarWrapper>
@@ -35,7 +35,7 @@ function IntroSection() {
 								Contact
 							</Link>
 							<OutboundLink
-								href="https://resume.creddle.io/resume/1upmg1yxkj4"
+								href="https://resume.creddle.io/resume/f0qzoaw5pw"
 								target="_blank"
 								rel="noreferrer"
 								className="btn btn-yellow"
