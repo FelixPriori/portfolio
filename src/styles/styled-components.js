@@ -412,12 +412,12 @@ export const CustomInput = styled.input`
 	display: block;
 	width: 100%;
 	border: 2px solid
-		${({ $error }) => ($error ? 'var(--color-secondary)' : 'var(--color-dark)')};
+		${({ $error }) => ($error ? 'var(--color-secondary)' : 'transparent')};
 	border-radius: var(--radius-box);
 
 	&:focus-within {
-		outline: 2px solid var(--color-highlight);
-		outline-offset: 1px;
+		outline: 2px solid var(--color-primary-light);
+		outline-offset: 2px;
 	}
 `
 
@@ -426,12 +426,12 @@ export const CustomTextarea = styled.textarea`
 	width: 100%;
 	padding: var(--padding-input);
 	border: 2px solid
-		${({ $error }) => ($error ? 'var(--color-secondary)' : 'var(--color-dark)')};
+		${({ $error }) => ($error ? 'var(--color-secondary)' : 'transparent')};
 	border-radius: var(--radius-box);
 
 	&:focus-within {
-		outline: 2px solid var(--color-highlight);
-		outline-offset: 1px;
+		outline: 2px solid var(--color-primary-light);
+		outline-offset: 2px;
 	}
 `
 
