@@ -1,24 +1,27 @@
 import styled, { css } from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
-import { Col, Row } from 'reactstrap'
+import { Col, Row, Container } from 'reactstrap'
 import { Link } from 'gatsby'
 
 const shadow = `1px 1px 10px var(--color-dark)`
 
-export const Main = styled.main``
+export const Main = styled(Container)``
+
+export const HeaderSection = styled(Container)`
+	padding: var(--padding-section);
+	padding-top: var(--padding-section-large);
+`
 
 export const SectionWrapper = styled.section`
-	&:first-of-type {
-		padding-top: 4rem;
-	}
+	padding: var(--padding-section);
 	&:last-of-type {
-		padding-bottom: 4rem;
+		padding-bottom: var(--padding-section-large);
 	}
 `
 
 export const HeroWrapper = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 `
 
 export const TextWrapper = styled.div`
@@ -26,6 +29,7 @@ export const TextWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
+
 	@media (max-width: 768px) {
 		align-items: center;
 	}
@@ -61,7 +65,7 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledProjectLink = styled(Link)`
-	margin: 1em;
+	margin: 1rem;
 `
 
 export const StyledIconLink = styled(OutboundLink)`
@@ -97,7 +101,6 @@ export const Title = styled.h1`
 	background-repeat: repeat;
 	color: transparent;
 	background-clip: text;
-	/* text-shadow: 0px 4px 10px var(--color-dark); */
 
 	@media (max-width: 768px) {
 		font-size: clamp(2.5rem, 1.7857rem + 3.5714vw, 3.5rem);
@@ -181,7 +184,7 @@ export const ImageColumn = styled(Col)`
 
 export const HeaderContainer = styled.div`
 	height: 100%;
-	padding: 1em 0;
+	padding: 1rem 0;
 `
 
 export const List = styled.ul`
@@ -194,7 +197,7 @@ export const List = styled.ul`
 `
 
 export const ListItem = styled.li`
-	margin: 0.5em;
+	margin: 0.5rem;
 `
 
 export const ErrorMessage = styled.div`
@@ -202,7 +205,8 @@ export const ErrorMessage = styled.div`
 `
 
 export const ContactSectionWrapper = styled.footer`
-	padding: 4em 0;
+	padding: var(--padding-section);
+	padding-top: var(--padding-section-large);
 	color: var(--color-light);
 	background-color: var(--color-primary-dark);
 
@@ -212,15 +216,15 @@ export const ContactSectionWrapper = styled.footer`
 `
 
 export const TitleContainer = styled.div`
-	padding: 2em 0;
+	padding: var(--padding-section);
 `
 
 export const ProjectWrapper = styled(Row)`
-	padding: 1em 0;
+	padding: 1rem 0;
 `
 
 export const StackRow = styled(Row)`
-	padding: 1em 0;
+	padding: 1rem 0;
 	ul {
 		margin-bottom: 0;
 	}
@@ -235,14 +239,14 @@ export const ImageWithShadow = styled.img`
 	height: ${({ height }) => (height ? `${height}px` : '')};
 	width: ${({ width }) => (width ? `${width}px` : '')};
 	max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '')};
-	margin: 1em 0;
-	border-radius: 5px;
+	margin: 1rem 0;
+	border-radius: var(--radius-box);
 `
 
 export const DivWithShadow = styled.div`
 	box-shadow: ${shadow};
 	background-color: var(--color-shoppies-light);
-	border-radius: 5px;
+	border-radius: var(--radius-box);
 `
 
 export const LogoBulletList = styled.ul`
@@ -287,13 +291,13 @@ export const LogoLinkedContainer = styled(OutboundLink)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 1em;
+	margin: 1rem;
 	min-width: 120px;
 	max-width: 120px;
 	min-height: 60px;
 	max-height: 120px;
 	background-color: var(--color-light);
-	border-radius: 5px;
+	border-radius: var(--radius-box);
 	box-shadow: inset 1px 1px 10px var(--color-primary-lighter);
 `
 
@@ -302,7 +306,7 @@ export const LogoCol = styled(Col)`
 	align-items: center;
 
 	h3 {
-		margin-left: 2em;
+		margin-left: 2rem;
 	}
 `
 
@@ -323,7 +327,7 @@ export const MessagePreviewList = styled.ul`
 
 	li {
 		margin: 0;
-		padding: 1em;
+		padding: 1rem;
 	}
 `
 
@@ -336,7 +340,7 @@ export const PostersContainer = styled.div`
 `
 
 export const SubSection = styled.div`
-	padding: 2em 0;
+	padding: var(--padding-section);
 `
 
 export const RedLight = styled.div`
@@ -345,7 +349,7 @@ export const RedLight = styled.div`
 	max-width: 5px;
 	max-height: 5px;
 	background-color: var(--color-secondary);
-	border-radius: 50%;
+	border-radius: var(--radius-full);
 	box-shadow: 1px 1px 5px var(--color-secondary),
 		-1px -1px 5px var(--color-secondary), -1px 1px 5px var(--color-secondary),
 		1px -1px 5px var(--color-secondary);
@@ -357,7 +361,7 @@ export const FooterWrapper = styled.footer`
 	justify-content: space-around;
 	align-items: baseline;
 	align-content: baseline;
-	padding-top: 4em;
+	padding-top: var(--padding-section-large);
 `
 
 export const GithubLink = styled(OutboundLink)`
@@ -365,8 +369,9 @@ export const GithubLink = styled(OutboundLink)`
 	align-items: center;
 	padding: 0;
 	margin: 0;
+
 	svg {
-		margin-left: 1em;
+		margin-left: 1rem;
 		height: 32px;
 		width: 32px;
 		fill: var(--color-light);
@@ -384,15 +389,31 @@ export const ButtonContainer = styled.div`
 	& > a:not(:last-of-type) {
 		margin-right: 0.5em;
 	}
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		& > a {
+			width: min(100%, 340px);
+
+			&:not(:last-of-type) {
+				margin-bottom: 0.5rem;
+				margin-right: 0;
+			}
+		}
+	}
 `
 
 export const CustomInput = styled.input`
-	padding: 0.75rem 1.25rem;
+	padding: var(--padding-input);
 	display: block;
 	width: 100%;
 	border: 2px solid
 		${({ $error }) => ($error ? 'var(--color-secondary)' : 'var(--color-dark)')};
-	border-radius: 0.375rem;
+	border-radius: var(--radius-box);
 
 	&:focus-within {
 		outline: 2px solid var(--color-highlight);
@@ -403,10 +424,10 @@ export const CustomInput = styled.input`
 export const CustomTextarea = styled.textarea`
 	display: block;
 	width: 100%;
-	padding: 0.75rem 1.25rem;
+	padding: var(--padding-input);
 	border: 2px solid
 		${({ $error }) => ($error ? 'var(--color-secondary)' : 'var(--color-dark)')};
-	border-radius: 0.375rem;
+	border-radius: var(--radius-box);
 
 	&:focus-within {
 		outline: 2px solid var(--color-highlight);

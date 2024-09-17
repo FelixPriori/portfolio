@@ -5,6 +5,9 @@ export default function TrainingLogo({ company }) {
 	const defaultImgProps = {
 		width: 75,
 		height: 75,
+		style: {
+			borderRadius: 'var(--radius-box)',
+		},
 	}
 
 	if (company === 'Lighthouse Labs') {

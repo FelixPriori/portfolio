@@ -6,8 +6,8 @@ import styled from 'styled-components'
 const PowerLinkWrapper = styled(Link)`
 	display: inline-block;
 	position: relative;
-	padding: 0.75rem 2rem;
-	border-radius: 12px;
+	padding: var(--padding-button);
+	border-radius: var(--radius-box);
 	box-shadow: inset 1px 1px 10px var(--color-dark);
 	overflow: hidden;
 	text-decoration: none;
@@ -21,8 +21,8 @@ const PowerLinkWrapper = styled(Link)`
 const PowerOutboundLinkWrapper = styled(OutboundLink)`
 	display: inline-block;
 	position: relative;
-	padding: 0.75rem 2rem;
-	border-radius: 12px;
+	padding: var(--padding-button);
+	border-radius: var(--radius-box);
 	box-shadow: inset 1px 1px 10px var(--color-dark);
 	overflow: hidden;
 	text-decoration: none;

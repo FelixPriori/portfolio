@@ -5,48 +5,45 @@ import {
 	Title,
 	BigText,
 	ButtonContainer,
-	SectionWrapper,
 	HeroWrapper,
 	TextWrapper,
 	TextInnerWrapper,
 	AvatarWrapper,
+	HeaderSection,
 } from '../../styles/styled-components'
 import { Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
-import { Container } from 'reactstrap'
 import Pattern from '../../images/pattern.jpeg'
 
 function IntroSection() {
 	return (
-		<SectionWrapper>
-			<Container>
-				<HeroWrapper>
-					<TextWrapper>
-						<TextInnerWrapper>
-							<Title $bg={Pattern}>Felix Rioux Sabourin</Title>
-							<BigText>Professional Web Developer</BigText>
-						</TextInnerWrapper>
-					</TextWrapper>
-					<AvatarWrapper>
-						<Avatar />
-						<SocialList />
-						<ButtonContainer>
-							<Link className="btn btn-blue" to="#contact">
-								Contact
-							</Link>
-							<OutboundLink
-								href="https://resume.creddle.io/resume/f0qzoaw5pw"
-								target="_blank"
-								rel="noreferrer"
-								className="btn btn-yellow"
-							>
-								Resume
-							</OutboundLink>
-						</ButtonContainer>
-					</AvatarWrapper>
-				</HeroWrapper>
-			</Container>
-		</SectionWrapper>
+		<HeaderSection tag="header">
+			<HeroWrapper>
+				<TextWrapper>
+					<TextInnerWrapper>
+						<Title $bg={Pattern}>Felix Rioux Sabourin</Title>
+						<BigText>Professional Web Developer</BigText>
+					</TextInnerWrapper>
+				</TextWrapper>
+				<AvatarWrapper>
+					<Avatar />
+					<SocialList />
+					<ButtonContainer>
+						<Link className="btn btn-blue" to="#contact">
+							Contact
+						</Link>
+						<OutboundLink
+							href="https://resume.creddle.io/resume/f0qzoaw5pw"
+							target="_blank"
+							rel="noreferrer"
+							className="btn btn-yellow"
+						>
+							Resume
+						</OutboundLink>
+					</ButtonContainer>
+				</AvatarWrapper>
+			</HeroWrapper>
+		</HeaderSection>
 	)
 }
 

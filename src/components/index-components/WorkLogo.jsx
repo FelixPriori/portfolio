@@ -1,9 +1,13 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+
 export default function WorkLogo({ workplace }) {
 	const defaultImgProps = {
 		width: 75,
 		height: 75,
+		style: {
+			borderRadius: 'var(--radius-box)',
+		},
 	}
 
 	if (workplace === 'Nurun') {

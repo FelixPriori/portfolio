@@ -9,6 +9,7 @@ function Avatar() {
 			src="../../images/avatar.jpg"
 			alt="Felix Headshot"
 			loading="eager"
+			layout="constrained"
 		/>
 	)
 }
