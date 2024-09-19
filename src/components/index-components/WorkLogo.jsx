@@ -36,11 +36,22 @@ export default function WorkLogo({ workplace }) {
 		)
 	} else if (workplace === 'The future') {
 		return (
-			<StaticImage
-				src="../../images/lightbulb.png"
-				alt="Lightbulb"
-				{...defaultImgProps}
-			/>
+			<div
+				style={{
+					backgroundColor: 'var(--color-light)',
+					borderRadius: 'var(--radius-box)',
+				}}
+			>
+				<StaticImage
+					src="../../images/lightbulb.png"
+					alt="Lightbulb"
+					{...defaultImgProps}
+					style={{
+						...defaultImgProps.style,
+						display: 'block',
+					}}
+				/>
+			</div>
 		)
 	}
 }

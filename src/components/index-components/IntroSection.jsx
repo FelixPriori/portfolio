@@ -10,18 +10,27 @@ import {
 	TextInnerWrapper,
 	AvatarWrapper,
 	HeaderSection,
+	ToggleThemeWrapper,
 } from '../../styles/styled-components'
 import { Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
-import Pattern from '../../images/pattern.jpeg'
+import LightPattern from '../../images/pattern.jpeg'
+import DarkPattern from '../../images/dark-pattern.jpeg'
+import ToggleTheme from '../ToggleTheme'
 
 function IntroSection() {
 	return (
 		<HeaderSection tag="header">
+			<ToggleThemeWrapper>
+				<ToggleTheme />
+			</ToggleThemeWrapper>
+
 			<HeroWrapper>
 				<TextWrapper>
 					<TextInnerWrapper>
-						<Title $bg={Pattern}>Felix Rioux Sabourin</Title>
+						<Title $bg={LightPattern} $darkBg={DarkPattern}>
+							Felix Rioux Sabourin
+						</Title>
 						<BigText>Professional Web Developer</BigText>
 					</TextInnerWrapper>
 				</TextWrapper>

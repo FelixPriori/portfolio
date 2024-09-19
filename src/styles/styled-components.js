@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
-import { Col, Row, Container } from 'reactstrap'
+import { Col, Row, Container, FormGroup, Label, Input } from 'reactstrap'
 import { Link } from 'gatsby'
 
 const shadow = `1px 1px 10px var(--color-dark)`
@@ -55,12 +55,12 @@ export const AvatarWrapper = styled.div`
 `
 
 export const StyledLink = styled(Link)`
-	color: var(--color-primary);
+	color: var(--color-link);
 	font-size: 20px;
 	transition: color 250ms ease-in-out;
 
 	&:hover {
-		color: var(--color-primary-dark);
+		color: var(--color-link-hover);
 	}
 `
 
@@ -69,14 +69,14 @@ export const StyledProjectLink = styled(Link)`
 `
 
 export const StyledIconLink = styled(OutboundLink)`
-	color: var(--color-primary);
+	color: var(--color-text);
 	font-size: 20px;
 	transition: color 200ms ease-in;
 
 	svg {
 		height: 28px;
 		width: 28px;
-		fill: var(--color-primary-dark);
+		fill: var(--color-text);
 		transition: fill 200ms ease-in;
 	}
 
@@ -105,6 +105,14 @@ export const Title = styled.h1`
 	@media (max-width: 768px) {
 		font-size: clamp(2.5rem, 1.7857rem + 3.5714vw, 3.5rem);
 		line-height: 0.85;
+	}
+
+	body.dark & {
+		${props =>
+			props.$darkBg &&
+			css`
+				background-image: url(${props.$darkBg});
+			`}
 	}
 `
 
@@ -208,7 +216,7 @@ export const ContactSectionWrapper = styled.footer`
 	padding: var(--padding-section);
 	padding-top: var(--padding-section-large);
 	color: var(--color-light);
-	background-color: var(--color-primary-dark);
+	background-color: var(--color-background-footer);
 
 	a {
 		color: var(--color-light);
@@ -450,7 +458,6 @@ export const Mark = styled.mark`
 	margin: 0 -0.2em;
 	padding: 0.1em 0.25em;
 	border-radius: 0.8em 0.3em;
-	background-color: transparent;
 	background-image: linear-gradient(
 		to right,
 		rgba(235, 203, 139, 0.3),
@@ -463,4 +470,16 @@ export const Mark = styled.mark`
 export const SubmitButtonWrapper = styled.div`
 	display: flex;
 	justify-content: flex-end;
+`
+
+export const ThemeToggleFormGroup = styled(FormGroup)``
+
+export const ThemeToggleLabel = styled(Label)``
+
+export const ThemeToggleInput = styled(Input)``
+
+export const ToggleThemeWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
 `
