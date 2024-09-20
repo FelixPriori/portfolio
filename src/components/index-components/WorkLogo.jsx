@@ -2,11 +2,6 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
-const LogoWrapper = styled.div`
-	background-color: var(--color-light);
-	border-radius: var(--radius-box);
-`
-
 export default function WorkLogo({ workplace }) {
 	const defaultImgProps = {
 		width: 75,
@@ -42,13 +37,11 @@ export default function WorkLogo({ workplace }) {
 		)
 	} else if (workplace === 'The future') {
 		return (
-			<LogoWrapper>
-				<StaticImage
-					src="../../images/lightbulb.png"
-					alt="Lightbulb"
-					{...defaultImgProps}
-				/>
-			</LogoWrapper>
+			<StaticImage
+				src="../../images/rocket.png"
+				alt="Rocket"
+				{...defaultImgProps}
+			/>
 		)
 	}
 }
