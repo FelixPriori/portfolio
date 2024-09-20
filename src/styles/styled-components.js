@@ -482,3 +482,61 @@ export const ToggleThemeWrapper = styled.div`
 	justify-content: center;
 	margin-bottom: 2rem;
 `
+
+export const TestimonialWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: fit-content;
+`
+
+export const TestimonialName = styled.h3`
+	margin-top: 1.25rem;
+`
+
+export const TestimonialPosition = styled.p`
+	font-weight: 700;
+`
+
+export const TestimonialQuote = styled.blockquote`
+	position: relative;
+	line-height: 180%;
+	letter-spacing: 0.15ch;
+	max-width: 50ch;
+	padding: 1.5rem 2.5rem;
+	margin: 0;
+	text-align: center;
+
+	&:before,
+	&:after {
+		line-height: 5rem;
+		font-size: 5rem;
+		position: absolute;
+		transform: translateY(-50%);
+		top: 50%;
+	}
+	&:before {
+		content: '“';
+		left: 0;
+	}
+	&:after {
+		content: '”';
+		right: 0;
+	}
+
+	@media (max-width: 480px) {
+		padding: 1.5rem 0;
+
+		&:before,
+		&:after {
+			font-size: 10rem;
+			opacity: 0.15;
+		}
+		&:before {
+			transform: translateY(-100%);
+		}
+		&:after {
+			transform: translateY(100%);
+		}
+	}
+`

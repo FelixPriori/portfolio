@@ -5,6 +5,7 @@ import TechnologiesSection from '../components/index-components/TechnologiesSect
 import WorkSection from '../components/index-components/WorkSection'
 import TrainingSection from '../components/index-components/TrainingSection'
 import ContactSection from '../components/ContactSection'
+import TestimonialsSection from '../components/index-components/TestimonialsSection'
 import { Main } from '../styles/styled-components'
 import Seo from '../components/SEO'
 
@@ -19,6 +20,7 @@ function IndexPage() {
 				<TechnologiesSection />
 				<WorkSection />
 				<TrainingSection />
+				<TestimonialsSection />
 			</Main>
 			<ContactSection />
 		</>
