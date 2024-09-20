@@ -7,27 +7,25 @@ import StackSection from '../components/shoppies-components/StackSection'
 import ExtraFeaturesSection from '../components/shoppies-components/ExtraFeaturesSection'
 import ConclusionSection from '../components/shoppies-components/ConclusionSection'
 import Seo from '../components/SEO'
-import Navbar from '../components/Navbar'
 
 export const Head = () => <Seo title="Shoppies | FelixPriori Porftolio" />
 
 function ShoppiesPage() {
 	return (
-		<Main>
-			<Navbar />
+		<>
+			<Main tag="main">
+				<IntroSection />
 
-			<IntroSection />
+				<SummarySection />
 
-			<SummarySection />
+				<StackSection />
 
-			<StackSection />
+				<ExtraFeaturesSection />
 
-			<ExtraFeaturesSection />
-
-			<ConclusionSection />
-
+				<ConclusionSection />
+			</Main>
 			<ContactSection />
-		</Main>
+		</>
 	)
 }
 

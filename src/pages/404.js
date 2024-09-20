@@ -1,18 +1,29 @@
 import * as React from 'react'
-import StyledHeader from '../components/StyledHeader'
-import { Title, Main, StyledLink } from '../styles/styled-components'
+import {
+	Title,
+	Main,
+	StyledLink,
+	HeaderSection,
+	SectionWrapper,
+} from '../styles/styled-components'
+import ContactSection from '../components/ContactSection'
 import Seo from '../components/SEO'
 
 export const Head = () => <Seo title="404 Page | Felix's Porftolio" />
 
 const NotFoundPage = () => {
 	return (
-		<Main>
-			<StyledHeader>
+		<>
+			<HeaderSection>
 				<Title>Page Not Found</Title>
-				<StyledLink to="/">Click here to go back to the main page</StyledLink>
-			</StyledHeader>
-		</Main>
+			</HeaderSection>
+			<Main tag="main">
+				<SectionWrapper>
+					<StyledLink to="/">Click here to go back to the main page</StyledLink>
+				</SectionWrapper>
+			</Main>
+			<ContactSection />
+		</>
 	)
 }
 

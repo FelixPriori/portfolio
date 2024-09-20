@@ -34,6 +34,12 @@
 	--padding-section-small: 2rem;
 	--padding-section-large: 4rem;
 	--padding-section: var(--padding-section-small) 0;
+
+	/* SHADOW */
+	--shadow-image: 1px 1px 10px var(--color-dark);
+
+	/* SIZE */
+	--size-svg: 32px;
 }
 
 body {

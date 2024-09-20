@@ -1,15 +1,18 @@
 import React from 'react'
-import { Subtitle, SectionWrapper } from '../../styles/styled-components'
-import StyledHeader from '../StyledHeader'
+import {
+	Subtitle,
+	SectionWrapper,
+	SubtitleWrapper,
+} from '../../styles/styled-components'
 import TrainingFeature from './TrainingFeature'
 import { trainingData } from '../../data/trainingData'
 
 export default function TrainingSection() {
 	return (
 		<SectionWrapper id="training">
-			<StyledHeader>
+			<SubtitleWrapper>
 				<Subtitle>Certificates</Subtitle>
-			</StyledHeader>
+			</SubtitleWrapper>
 			{trainingData.map(data => (
 				<TrainingFeature {...data} />
 			))}

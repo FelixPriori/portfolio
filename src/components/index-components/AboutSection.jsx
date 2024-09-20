@@ -1,18 +1,18 @@
 import React from 'react'
-import StyledHeader from '../StyledHeader'
 import {
 	Subtitle,
 	Paragraph,
 	SectionWrapper,
+	SubtitleWrapper,
 	Mark,
 } from '../../styles/styled-components'
 
 function AboutSection() {
 	return (
 		<SectionWrapper id="about">
-			<StyledHeader>
+			<SubtitleWrapper>
 				<Subtitle>About Me</Subtitle>
-			</StyledHeader>
+			</SubtitleWrapper>
 			<Paragraph>
 				With over <Mark>four years of experience</Mark> in front-end
 				development, I am a dynamic professional and an arts-oriented individual

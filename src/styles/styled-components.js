@@ -1,9 +1,16 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
-import { Col, Row, Container, FormGroup, Label, Input } from 'reactstrap'
+import { Col, Row, Container } from 'reactstrap'
 import { Link } from 'gatsby'
 
-const shadow = `1px 1px 10px var(--color-dark)`
+const rotate = keyframes`
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+`
 
 export const Main = styled(Container)``
 
@@ -74,8 +81,8 @@ export const StyledIconLink = styled(OutboundLink)`
 	transition: color 200ms ease-in;
 
 	svg {
-		height: 28px;
-		width: 28px;
+		height: var(--size-svg);
+		width: var(--size-svg);
 		fill: var(--color-text);
 		transition: fill 200ms ease-in;
 	}
@@ -99,7 +106,7 @@ export const Title = styled.h1`
 		`}
 	background-size: 250px;
 	background-repeat: repeat;
-	color: transparent;
+	color: var(--color-text);
 	background-clip: text;
 
 	@media (max-width: 768px) {
@@ -190,7 +197,7 @@ export const ImageColumn = styled(Col)`
 	align-items: center;
 `
 
-export const HeaderContainer = styled.div`
+export const SubtitleWrapper = styled.div`
 	height: 100%;
 	padding: 1rem 0;
 `
@@ -243,7 +250,7 @@ export const FormWrapper = styled(Col)``
 export const Showcase = styled.div``
 
 export const ImageWithShadow = styled.img`
-	box-shadow: ${shadow};
+	box-shadow: var(--shadow-image);
 	height: ${({ height }) => (height ? `${height}px` : '')};
 	width: ${({ width }) => (width ? `${width}px` : '')};
 	max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}px` : '')};
@@ -252,7 +259,7 @@ export const ImageWithShadow = styled.img`
 `
 
 export const DivWithShadow = styled.div`
-	box-shadow: ${shadow};
+	box-shadow: var(--shadow-image);
 	background-color: var(--color-shoppies-light);
 	border-radius: var(--radius-box);
 `
@@ -279,15 +286,7 @@ export const LogoBulletItem = styled.li`
 export const ReactSpinningLogo = styled.img`
 	height: ${({ height }) => (height ? `${height}px` : '60px')};
 	width: ${({ width }) => (width ? `${width}px` : '60px')};
-	@keyframes App-logo-spin {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-	animation: App-logo-spin infinite 20s linear;
+	animation: ${rotate} infinite 20s linear;
 `
 
 export const Logo = styled.img`
@@ -380,8 +379,8 @@ export const GithubLink = styled(OutboundLink)`
 
 	svg {
 		margin-left: 1rem;
-		height: 32px;
-		width: 32px;
+		height: var(--size-svg);
+		width: var(--size-svg);
 		fill: var(--color-light);
 	}
 
@@ -471,12 +470,6 @@ export const SubmitButtonWrapper = styled.div`
 	display: flex;
 	justify-content: flex-end;
 `
-
-export const ThemeToggleFormGroup = styled(FormGroup)``
-
-export const ThemeToggleLabel = styled(Label)``
-
-export const ThemeToggleInput = styled(Input)``
 
 export const ToggleThemeWrapper = styled.div`
 	display: flex;

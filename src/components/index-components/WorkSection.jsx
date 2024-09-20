@@ -1,15 +1,18 @@
 import React from 'react'
-import { Subtitle, SectionWrapper } from '../../styles/styled-components'
-import StyledHeader from '../StyledHeader'
+import {
+	Subtitle,
+	SectionWrapper,
+	SubtitleWrapper,
+} from '../../styles/styled-components'
 import WorkFeature from './WorkFeature'
 import { workData } from '../../data/workData'
 
 export default function WorkSection() {
 	return (
 		<SectionWrapper id="work-history">
-			<StyledHeader>
+			<SubtitleWrapper>
 				<Subtitle>Work History</Subtitle>
-			</StyledHeader>
+			</SubtitleWrapper>
 			{workData.map(data => (
 				<WorkFeature {...data} />
 			))}

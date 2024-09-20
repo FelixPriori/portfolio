@@ -1,10 +1,10 @@
 import React from 'react'
-import StyledHeader from '../StyledHeader'
 import LogoBullet from '../LogoBullet'
 import {
 	Subtitle,
 	SectionWrapper,
 	LogoBulletList,
+	SubtitleWrapper,
 } from '../../styles/styled-components'
 import reactLogo from '../../images/react-32x32.png'
 import javascriptLogo from '../../images/javascript-32x32.png'
@@ -24,9 +24,9 @@ import styledComponentsLogo from '../../images/styled-components.png'
 function TechnologiesSection() {
 	return (
 		<SectionWrapper id="technologies">
-			<StyledHeader>
+			<SubtitleWrapper>
 				<Subtitle>Technologies</Subtitle>
-			</StyledHeader>
+			</SubtitleWrapper>
 			<LogoBulletList>
 				<LogoBullet logo={reactLogo} alt="React Logo" isReact>
 					React.js
