@@ -99,27 +99,33 @@ export const StyledIconLink = styled(OutboundLink)`
 
 export const Title = styled.h1`
 	font-size: clamp(2rem, -0.4234rem + 5.0553vw, 4rem);
+	color: var(--color-text);
+
 	${props =>
 		props.$bg &&
 		css`
 			background-image: url(${props.$bg});
+			background-clip: text;
+			background-size: 250px;
+			background-repeat: repeat;
+			color: transparent;
 		`}
-	background-size: 250px;
-	background-repeat: repeat;
-	color: var(--color-text);
-	background-clip: text;
-
-	@media (max-width: 768px) {
-		font-size: clamp(2.5rem, 1.7857rem + 3.5714vw, 3.5rem);
-		line-height: 0.85;
-	}
 
 	body.dark & {
 		${props =>
 			props.$darkBg &&
 			css`
 				background-image: url(${props.$darkBg});
+				background-clip: text;
+				background-size: 250px;
+				background-repeat: repeat;
+				color: transparent;
 			`}
+	}
+
+	@media (max-width: 768px) {
+		font-size: clamp(2.5rem, 1.7857rem + 3.5714vw, 3.5rem);
+		line-height: 0.85;
 	}
 `
 
