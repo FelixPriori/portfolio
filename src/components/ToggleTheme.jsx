@@ -8,11 +8,14 @@ export default function ToggleTheme() {
 			{({ theme, toggleTheme }) => (
 				<FormGroup switch>
 					<Input
+						id="dark-mode-switch"
 						type="switch"
 						checked={theme === 'dark'}
 						onClick={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
 					/>
-					<Label checked={theme === 'dark'}>Dark Mode</Label>
+					<Label htmlFor="dark-mode-switch" checked={theme === 'dark'}>
+						Dark Mode
+					</Label>
 				</FormGroup>
 			)}
 		</ThemeToggler>
