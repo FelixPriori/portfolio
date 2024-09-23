@@ -11,7 +11,7 @@ export default function ToggleTheme() {
 						id="dark-mode-switch"
 						type="switch"
 						checked={theme === 'dark'}
-						onClick={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+						onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
 					/>
 					<Label htmlFor="dark-mode-switch" checked={theme === 'dark'}>
 						Dark Mode
