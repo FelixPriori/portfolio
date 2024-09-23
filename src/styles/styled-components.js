@@ -95,6 +95,12 @@ export const StyledIconLink = styled(OutboundLink)`
 			fill: var(--color-primary-light);
 		}
 	}
+
+	&:focus {
+		outline: 2px solid var(--color-primary-light);
+		outline-offset: 2px;
+		border-radius: var(--radius-icon);
+	}
 `
 
 export const Title = styled.h1`
@@ -382,6 +388,7 @@ export const GithubLink = styled(OutboundLink)`
 	align-items: center;
 	padding: 0;
 	margin: 0;
+	max-width: fit-content;
 
 	svg {
 		margin-left: 1rem;
@@ -395,6 +402,12 @@ export const GithubLink = styled(OutboundLink)`
 		svg {
 			fill: var(--color-primary-light);
 		}
+	}
+
+	&:focus {
+		outline: 2px solid var(--color-primary-light);
+		outline-offset: 2px;
+		border-radius: var(--radius-box);
 	}
 `
 

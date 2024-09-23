@@ -23,6 +23,7 @@
 	--font-family-header: 'Rowdies', sans-serif;
 
 	/* RADIUS */
+	--radius-icon: 0.25rem;
 	--radius-box: 0.375rem;
 	--radius-full: 50%;
 
@@ -92,7 +93,12 @@ p {
 	font-weight: 700;
 	letter-spacing: 0.2ch;
 	padding: var(--padding-button);
-	transition: 200ms;
+	transition: background-color 200ms ease-in;
+
+	&:focus {
+		outline: 2px solid var(--color-primary-light);
+		outline-offset: 2px;
+	}
 
 	&.btn-blue {
 		background-color: var(--color-primary-light);
