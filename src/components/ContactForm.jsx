@@ -46,13 +46,15 @@ function ContactForm() {
 			<input type="hidden" name="contact-form" value="contact" />
 
 			<FormInputWrapper>
-				<CustomLabel id="name-lbl" htmlFor="name">
+				<CustomLabel id="name-lbl" htmlFor="contact-name">
 					Name
 				</CustomLabel>
 				<CustomInput
+					id="contact-name"
 					aria-labelledby="name-lbl"
 					type="text"
 					placeholder="Your name"
+					autoComplete="on"
 					$error={errors?.name}
 					{...register('name', { required: 'Name is required' })}
 				/>
@@ -60,13 +62,15 @@ function ContactForm() {
 			</FormInputWrapper>
 
 			<FormInputWrapper>
-				<CustomLabel id="email-lbl" htmlFor="email">
+				<CustomLabel id="email-lbl" htmlFor="contact-email">
 					Email
 				</CustomLabel>
 				<CustomInput
+					id="contact-email"
 					aria-labelledby="email-lbl"
 					type="email"
 					placeholder="example@example.ca"
+					autoComplete="on"
 					$error={errors?.email}
 					{...register('email', { required: 'Email is required' })}
 				/>
@@ -74,16 +78,17 @@ function ContactForm() {
 			</FormInputWrapper>
 
 			<FormInputWrapper>
-				<CustomLabel id="message-lbl" htmlFor="message">
+				<CustomLabel id="message-lbl" htmlFor="contact-message">
 					Message
 				</CustomLabel>
 				<CustomTextarea
 					aria-labelledby="message-lbl"
+					id="contact-message"
 					type="textarea"
 					placeholder="Type your message here..."
 					$error={errors?.message}
 					rows="6"
-					maxlength={500}
+					maxLength={500}
 					{...register('message', { required: 'Message is required' })}
 				/>
 				{errors?.message && <ErrorMessage>Message is required</ErrorMessage>}
