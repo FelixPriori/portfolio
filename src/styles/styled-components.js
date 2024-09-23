@@ -540,3 +540,8 @@ export const TestimonialQuote = styled.blockquote`
 		}
 	}
 `
+
+export const TestimonialsWrapper = styled.div`
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+`

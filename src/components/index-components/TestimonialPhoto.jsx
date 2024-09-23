@@ -24,6 +24,14 @@ export default function TestimonialPhoto({ personName }) {
 					}}
 				/>
 			)
+		case 'Sheldon Malboeuf':
+			return (
+				<StaticImage
+					src="../../images/sheldon.png"
+					alt="Sheldon's Photo"
+					{...defaultImgProps}
+				/>
+			)
 		default:
 			return <></>
 	}

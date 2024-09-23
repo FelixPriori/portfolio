@@ -3,6 +3,7 @@ import {
 	Subtitle,
 	SectionWrapper,
 	SubtitleWrapper,
+	TestimonialsWrapper,
 } from '../../styles/styled-components'
 import { testimonialData } from '../../data/testimonialData'
 import Testimonial from './Testimonial'
@@ -13,9 +14,11 @@ export default function TestimonialsSection() {
 			<SubtitleWrapper>
 				<Subtitle>Testimonials</Subtitle>
 			</SubtitleWrapper>
-			{testimonialData.map(testimonial => (
-				<Testimonial {...testimonial} />
-			))}
+			<TestimonialsWrapper>
+				{testimonialData.map(testimonial => (
+					<Testimonial {...testimonial} />
+				))}
+			</TestimonialsWrapper>
 		</SectionWrapper>
 	)
 }
