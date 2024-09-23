@@ -14,7 +14,7 @@ export default function TrainingSection() {
 				<Subtitle>Certificates</Subtitle>
 			</SubtitleWrapper>
 			{trainingData.map(data => (
-				<TrainingFeature {...data} />
+				<TrainingFeature key={data.companyName} {...data} />
 			))}
 		</SectionWrapper>
 	)

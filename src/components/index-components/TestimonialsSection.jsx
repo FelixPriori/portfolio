@@ -16,7 +16,7 @@ export default function TestimonialsSection() {
 			</SubtitleWrapper>
 			<TestimonialsWrapper>
 				{testimonialData.map(testimonial => (
-					<Testimonial {...testimonial} />
+					<Testimonial key={testimonial.personName} {...testimonial} />
 				))}
 			</TestimonialsWrapper>
 		</SectionWrapper>

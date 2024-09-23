@@ -14,7 +14,7 @@ export default function WorkSection() {
 				<Subtitle>Work History</Subtitle>
 			</SubtitleWrapper>
 			{workData.map(data => (
-				<WorkFeature {...data} />
+				<WorkFeature key={data.companyName} {...data} />
 			))}
 		</SectionWrapper>
 	)
