@@ -69,7 +69,6 @@ module.exports = {
 				display: 'swap',
 			},
 		},
-		`gatsby-plugin-csp`,
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-svgr`,
 		`gatsby-plugin-image`,
