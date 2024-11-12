@@ -3,23 +3,19 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { FormGroup, Label, Input } from 'reactstrap'
 import styled from 'styled-components'
 
-const Switch = styled(FormGroup)`
+const SwitchLabel = styled(Label)`
 	cursor: pointer;
 `
 
-const SwitchLabel = styled(Label)`
-	cursor: inherit;
-`
-
 const SwitchInput = styled(Input)`
-	cursor: inherit;
+	cursor: pointer;
 `
 
 export default function ToggleTheme() {
 	return (
 		<ThemeToggler>
 			{({ theme, toggleTheme }) => (
-				<Switch switch>
+				<FormGroup switch>
 					<SwitchInput
 						id="dark-mode-switch"
 						type="switch"
@@ -29,7 +25,7 @@ export default function ToggleTheme() {
 					<SwitchLabel htmlFor="dark-mode-switch" checked={theme === 'dark'}>
 						Dark Mode
 					</SwitchLabel>
-				</Switch>
+				</FormGroup>
 			)}
 		</ThemeToggler>
 	)
