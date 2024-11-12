@@ -42,7 +42,7 @@ function IntroSection() {
 							Contact
 						</Link>
 						<OutboundLink
-							href="https://resume.creddle.io/resume/f0qzoaw5pw"
+							href="https://drive.google.com/file/d/1qgunvpS6rqU_98DTGBvWTcCzCIMHL6sC/view?usp=drive_link"
 							target="_blank"
 							rel="noreferrer"
 							className="btn btn-yellow"
