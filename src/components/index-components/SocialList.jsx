@@ -2,7 +2,12 @@ import React from 'react'
 import { ReactComponent as GitHub } from '../../images/logo-github.svg'
 import { ReactComponent as LinkedIn } from '../../images/logo-linkedin.svg'
 import { ReactComponent as Bluesky } from '../../images/logo-bluesky.svg'
-import { List, ListItem, StyledIconLink } from '../../styles/styled-components'
+import {
+	List,
+	ListItem,
+	StyledIconLink,
+	SrOnly,
+} from '../../styles/styled-components'
 
 function SocialListItem({ link, label, children }) {
 	return (
@@ -11,9 +16,10 @@ function SocialListItem({ link, label, children }) {
 				href={link}
 				target="_blank"
 				rel="noreferrer"
-				aria-label={label}
+				title={label}
 			>
 				{children}
+				<SrOnly>{label}</SrOnly>
 			</StyledIconLink>
 		</ListItem>
 	)
@@ -24,18 +30,21 @@ function SocialList() {
 		<List>
 			<SocialListItem
 				link="https://www.linkedin.com/in/felix-rioux-sabourin/"
-				label="LinkedIn"
+				label="Opens Felix's LinkedIn profile"
 			>
-				<LinkedIn />
+				<LinkedIn aria-hidden="true" focusable="false" />
 			</SocialListItem>
-			<SocialListItem link="https://github.com/FelixPriori/" label="Github">
-				<GitHub />
+			<SocialListItem
+				link="https://github.com/FelixPriori/"
+				label="Opens FelixPriori's Github"
+			>
+				<GitHub aria-hidden="true" focusable="false" />
 			</SocialListItem>
 			<SocialListItem
 				link="https://bsky.app/profile/felixpriori.dev"
-				label="Bluesky"
+				label="Opens @felixpriori.dev on Bluesky"
 			>
-				<Bluesky />
+				<Bluesky aria-hidden="true" focusable="false" />
 			</SocialListItem>
 		</List>
 	)
