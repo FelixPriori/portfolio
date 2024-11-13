@@ -160,6 +160,10 @@ export const Subtitle = styled.h2`
 	}
 `
 
+export const SmallSubtitle = styled.h2`
+	font-size: 1.25rem;
+`
+
 export const WorkFeatureWrapper = styled.div``
 
 export const WorkLogoWrapper = styled.div`
@@ -389,12 +393,14 @@ export const GithubLink = styled(OutboundLink)`
 	padding: 0;
 	margin: 0;
 	max-width: fit-content;
+	transition: all 250ms ease-in-out;
 
 	svg {
 		margin-left: 1rem;
 		height: var(--size-svg);
 		width: var(--size-svg);
 		fill: var(--color-light);
+		transition: all 250ms ease-in-out;
 	}
 
 	&:hover {

@@ -34,12 +34,30 @@ export default function WorkLogo({ workplace }) {
 				{...defaultImgProps}
 			/>
 		)
+	} else if (workplace === 'Independant') {
+		return (
+			<StaticImage
+				src="../../images/independant.png"
+				alt="Independant"
+				width="512px"
+				height="512px"
+				style={{
+					maxWidth: 75,
+					maxHeight: 75,
+				}}
+			/>
+		)
 	} else if (workplace === 'The future') {
 		return (
 			<StaticImage
 				src="../../images/rocket.png"
 				alt="Rocket"
-				{...defaultImgProps}
+				width="512px"
+				height="512px"
+				style={{
+					maxWidth: 75,
+					maxHeight: 75,
+				}}
 			/>
 		)
 	}

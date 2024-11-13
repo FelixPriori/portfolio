@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row } from 'reactstrap'
 import ContactForm from './ContactForm'
 import Copyright from './Copyright'
+import Credits from './index-components/Credits'
 import {
 	Subtitle,
 	ContactSectionWrapper,
@@ -25,6 +26,7 @@ function ContactSection() {
 				</Row>
 			</Container>
 			<Copyright />
+			<Credits />
 		</ContactSectionWrapper>
 	)
 }
